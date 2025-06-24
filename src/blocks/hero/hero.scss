@@ -1,0 +1,68 @@
+@use 'lib' as *;
+
+.hero {
+	$self: &;
+	background: url('./images/hero-bg.webp') top center / cover no-repeat transparent;
+	height: calc(var(--vh, 1dvh) * 100);
+
+	&__inner {
+		display: flex;
+		height: 100%;
+	}
+
+	&__motive {
+		flex-grow: 1;
+		align-self: flex-end;
+		
+		span {
+			display: block;
+			color: #fff;
+			font-size: 250px;
+			text-transform: uppercase;
+			line-height: 0.7;
+			
+			&:nth-child(1) {
+				font-weight: 300;
+			}
+			
+			&:nth-child(2) {
+				font-weight: 700;
+			}
+			
+			&:nth-child(3) {
+				font-weight: 300;
+			}
+		}
+	}
+	
+	&__side {
+		flex-grow: 1;
+		display: flex;
+		flex-flow: column nowrap;
+		padding: 100px 0 75px;
+	}
+
+	&__title {
+		background-color: #5595a4;
+		width: 700px;
+		padding: 35px 60px;
+		clip-path: polygon(3% 12%, 41% 0, 88% 5%, 100% 28%, 98% 90%, 67% 100%, 5% 95%, 0 64%);
+	}
+
+	&__come {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		font-weight: 700;
+		font-size: 28px;
+		color: #fff;
+		aspect-ratio: 1;
+		width: 290px;
+		margin: auto 0 0 85px;
+		border-radius: 1000px;
+		background-color: #f70000;
+	}
+}
