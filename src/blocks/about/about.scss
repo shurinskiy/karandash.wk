@@ -12,12 +12,12 @@
 	}
 
 	&__cards {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		display: flex;
+		justify-content: center;
 	}
 
 	&__card {
-
+		width: 420px;
 	}
 
 	&__think {
