@@ -1,0 +1,57 @@
+@use 'lib' as *;
+
+.about {
+	$self: &;
+
+	&__title {
+		background-color: #f70000;
+	}
+
+	&__inner {
+		padding-top: 60px;
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	&__card {
+
+	}
+
+	&__think {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__clawn {
+		z-index: 1;
+	}
+
+	&__motive {
+		width: 780px;
+		flex-shrink: 0;
+		padding: 70px 70px 60px;
+		background-color: #cbedf3;
+		clip-path: polygon(3% 12%, 41% 0, 88% 5%, 100% 28%, 98% 90%, 67% 100%, 5% 95%, 0 64%);
+		text-align: right;
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 24px;
+		margin-left: -70px;
+
+		strong {
+			display: block;
+			font-size: 42px;
+		}
+		
+		span {
+			display: block;
+			font-size: 25px;
+			font-style: italic;
+			font-weight: 500;
+		}
+	}
+}

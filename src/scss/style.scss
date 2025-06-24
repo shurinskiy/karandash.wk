@@ -37,6 +37,7 @@
 // @include font-face("Montserrat-Thin", "MR", 100);
 
 @include font-face("Geologica-Regular", "GL", 400);
+@include font-face("Geologica-Medium", "GL", 500);
 @include font-face("Geologica-Bold", "GL", 700);
 @include font-face("Geologica-Thin", "GL", 100);
 
@@ -53,9 +54,14 @@ body, html {
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
+	overflow-x: hidden;
 }
 
 body {
+
+	&[data-noscroll-target-scroll-disabled] {
+		max-height: 100vh;
+	}
 	
 	&.underlay {
 		&::before {
@@ -68,8 +74,8 @@ body {
 			width: 100%;
 			height: 100%;
 			background-color: rgba(0, 0, 0, 0.7);
-			transition: opacity 0.4s;
-			animation: fadeIn 0.4s;
+			transition: opacity 0.2s;
+			animation: fadeIn 0.2s;
 		}
 	
 		&_closing::before {
@@ -94,27 +100,4 @@ strong { font-weight: bold; }
 @keyframes fadeIn {
 	from { opacity: 0; }
 	to { opacity: 1; }
-}
-
-.mb1 { margin-bottom: 100px; }
-.mb2 { margin-bottom: 80px; }
-.mb3 { margin-bottom: 60px; }
-.mb4 { margin-bottom: 40px; }
-.mb5 { margin-bottom: 30px; }
-
-
-@include media('<=md') {
-	.mb1 { margin-bottom: 80px; }
-	.mb2 { margin-bottom: 60px; }
-	.mb3 { margin-bottom: 40px; }
-	.mb4 { margin-bottom: 30px; }
-	.mb5 { margin-bottom: 20px; }
-}
-
-@include media('<=xxs') {
-	.mb1 { margin-bottom: 60px; }
-	.mb2 { margin-bottom: 40px; }
-	.mb3 { margin-bottom: 30px; }
-	.mb4 { margin-bottom: 20px; }
-	.mb5 { margin-bottom: 15px; }
 }

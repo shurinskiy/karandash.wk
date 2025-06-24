@@ -1,0 +1,61 @@
+@use 'lib' as *;
+
+.meeting {
+	$self: &;
+
+	&__inner {
+		margin: -16px 0 30px;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__date {
+		color: #5796a4;
+		
+		span {
+			display: block;
+			font-size: 148px;
+			font-weight: 700;
+			line-height: 0.9;
+		}
+	}
+
+	&__location {
+		position: absolute;
+		top: 90px;
+		left: 290px;
+		color: #f70000;
+		font-weight: 300;
+		font-size: 75px;
+		line-height: 1.0;
+	}
+
+	&__motive {
+		font-size: 100px;
+		text-transform: uppercase;
+		font-weight: 700;
+		line-height: 1.02;
+
+		span {
+			display: block;
+			text-align: right;
+
+			&:nth-child(1) {
+				color: #f70000;
+			}
+			
+			&:nth-child(2) {
+				color: #f6af1b;
+			}
+			
+			&:nth-child(3) {
+				color: #ef5899;
+			}
+			
+			&:nth-child(4) {
+				color: #5796a4;
+			}
+		}
+	}
+}
