@@ -21,7 +21,7 @@
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: center;
-		gap: 40px;
+		gap: 30px;
 	}
 
 	&__image {
@@ -29,6 +29,8 @@
 	}
 
 	&__text {
-
+		font-size: 20px;
+		font-weight: 300;
+		line-height: 1.1;
 	}
 }
