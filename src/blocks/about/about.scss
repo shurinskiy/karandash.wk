@@ -3,7 +3,7 @@
 .about {
 	$self: &;
 
-	&__title {
+	&__title.title {
 		background-color: #f70000;
 	}
 
@@ -13,12 +13,12 @@
 
 	&__cards {
 		display: flex;
-		margin-bottom: 40px;
+		margin-bottom: 35px;
 		justify-content: center;
 	}
 
 	&__card {
-		width: 420px;
+		width: 415px;
 	}
 
 	&__think {
@@ -29,19 +29,24 @@
 
 	&__clawn {
 		z-index: 1;
+		
+		img {
+			display: block;
+		}
 	}
 
 	&__motive {
 		width: 780px;
 		flex-shrink: 0;
-		padding: 70px 70px 60px;
+		padding: 75px 70px 60px;
 		background-color: #cbedf3;
 		clip-path: polygon(3% 12%, 41% 0, 88% 5%, 100% 28%, 98% 90%, 67% 100%, 5% 95%, 0 64%);
 		text-align: right;
 		display: flex;
 		flex-flow: column nowrap;
 		gap: 24px;
-		margin-left: -70px;
+		margin: 0 0 15px -70px;
+		color: #000;
 
 		strong {
 			display: block;

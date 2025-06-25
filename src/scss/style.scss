@@ -55,13 +55,14 @@ body, html {
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
-	overflow-x: hidden;
 }
 
 body {
+	overflow-x: hidden;
+	position: relative;
 
 	&[data-noscroll-target-scroll-disabled] {
-		max-height: 100vh;
+
 	}
 	
 	&.underlay {

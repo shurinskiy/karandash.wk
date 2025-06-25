@@ -4,7 +4,7 @@
 	$self: &;
 
 	&__inner {
-		margin: -16px 0 30px;
+		margin: -16px 0 28px;
 		position: relative;
 		display: flex;
 		justify-content: space-between;
@@ -23,19 +23,22 @@
 
 	&__location {
 		position: absolute;
-		top: 90px;
-		left: 290px;
+		top: 60px;
+		left: 275px;
 		color: #f70000;
 		font-weight: 300;
 		font-size: 75px;
 		line-height: 1.0;
+		letter-spacing: -0.02em;
 	}
 
 	&__motive {
 		font-size: 100px;
 		text-transform: uppercase;
 		font-weight: 700;
-		line-height: 1.02;
+		line-height: 1.01;
+		padding-right: 10px;
+		letter-spacing: 0.02em;
 
 		span {
 			display: block;
