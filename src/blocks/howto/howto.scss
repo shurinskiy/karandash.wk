@@ -1,0 +1,72 @@
+@use 'lib' as *;
+
+.howto {
+	$self: &;
+	background: url('./images/howto-waves.svg') left bottom -20px / auto repeat-x #fad2db;
+
+	&__title.title {
+		background-color: #ef5899;
+		
+		span {
+			color: #fff;
+			margin: -15px 0;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		padding: 60px 0 120px;
+		
+		&.container {
+			max-width: 860px;
+		}
+	}
+
+	&__item {
+		padding: 0 50px;
+		display: flex;
+		align-items: center;
+		flex-flow: column nowrap;
+		position: relative;
+		aspect-ratio: 1;
+		gap: 20px;
+
+		&::before {
+			display: none;
+			content: '';
+			border: 2px solid #ef5899;
+			pointer-events: none;
+			position: absolute;
+			inset: 0;
+		}
+		
+		&_round::before {
+			display: block;
+			border-radius: 1000px;
+		}
+
+		&_rect::before {
+			display: block;
+		}
+
+		&_button {
+			
+		}
+
+		h3 {
+			padding-top: 40px;
+			text-align: center;
+			color: #ef5899;
+			font-weight: 700;
+			font-size: 20px;
+		}
+
+		p {
+			text-align: center;
+			// font-weight: 300;
+			font-size: 15px;
+			color: #000;
+		}
+	}
+}

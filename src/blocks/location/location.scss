@@ -1,0 +1,214 @@
+@use 'lib' as *;
+
+.location {
+	$self: &;
+	padding-bottom: 125px;
+
+	&__title.title {
+		background-color: #058a44;
+
+		span {
+			color: #fff;
+		}
+	}
+
+	&__inner {
+		max-width: 1140px;
+		display: flex;
+		align-items: flex-start;
+		gap: 65px;
+	}
+
+	&__map {
+		position: relative;
+		height: 755px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+		}
+
+		#{$self}__marker {
+			cursor: pointer;
+			position: absolute;
+			transition: scale 0.2s;
+			top: 0;
+
+			&.active {
+				scale: 1.5;
+				z-index: 1;
+			}
+
+			&:nth-child(1) {
+				top: calc(50% - 275px);
+				left: calc(50% + 105px);
+			}
+			
+			&:nth-child(2) {
+				top: calc(50% - 258px);
+				left: calc(50% - 90px);
+			}
+			
+			&:nth-child(3) {
+				top: calc(50% - 258px);
+				left: calc(50% - 75px);
+			}
+			
+			&:nth-child(4) {
+				top: calc(50% - 258px);
+				left: calc(50% - 60px);
+			}
+
+			&:nth-child(5) {
+				top: calc(50% - 293px);
+				left: calc(50% + 65px);
+			}
+
+			&:nth-child(6) {
+				top: calc(50% - 218px);
+				left: calc(50% - 150px);
+			}
+			
+			&:nth-child(7) {
+				top: calc(50% - 260px);
+				left: calc(50% - 205px);
+			}
+			
+			&:nth-child(8) {
+				top: calc(50% - 172px);
+				left: calc(50% - 120px);
+			}
+			
+			&:nth-child(9) {
+				top: calc(50% - 90px);
+				left: calc(50% - 80px);
+			}
+
+			&:nth-child(10) {
+				top: calc(50% - 75px);
+				left: calc(50% - 138px);
+			}
+
+			&:nth-child(11) {
+				top: calc(50% - 68px);
+				left: calc(50% - 115px);
+			}
+
+			&:nth-child(12) {
+				top: calc(50% - 68px);
+				left: calc(50% - 102px);
+			}
+
+			&:nth-child(13) {
+				top: calc(50% - 28px);
+				left: calc(50% - 198px);
+			}
+
+			&:nth-child(14) {
+				top: calc(50% - 28px);
+				left: calc(50% - 184px);
+			}
+
+			&:nth-child(15) {
+				top: calc(50% + 35px);
+				left: calc(50% - 119px);
+			}
+
+			&:nth-child(16) {
+				top: calc(50% + 35px);
+				left: calc(50% - 138px);
+			}
+
+			&:nth-child(17) {
+				top: calc(50% + 10px);
+				left: calc(50% - 75px);
+			}
+
+			&:nth-child(18) {
+				top: calc(50% + 110px);
+				left: calc(50% - 93px);
+			}
+
+			&:nth-child(19) {
+				top: calc(50% + 188px);
+				left: calc(50% - 75px);
+			}
+
+			&:nth-child(20) {
+				top: calc(50% + 85px);
+				left: calc(50% + 38px);
+			}
+
+			&:nth-child(21) {
+				top: calc(50% + 268px);
+				left: calc(50% - 147px);
+			}
+		}
+	}
+
+	&__marker {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 100px;
+		aspect-ratio: 1;
+		color: #fff;
+		border: 1px solid #fff;
+		box-shadow: 0 2px 7px rgba(0, 0, 0, 0.7);
+		font-size: 10px;
+		line-height: 0.9;
+		width: 19px;
+
+		&_green {
+			background-color: #058a44;
+		}
+		
+		&_pink {
+			background-color: #ef5899;
+		}
+		
+		&_red {
+			background-color: #f70000;
+		}
+	}
+
+	&__items {
+		width: 345px;
+		padding-top: 45px;
+	}
+
+	&__item {
+		padding: 8px 0 8px 40px;
+		position: relative;
+		font-weight: 300;
+		font-size: 17px;
+		color: #000;
+		cursor: pointer;
+		line-height: 1.18;
+
+		&.active span {
+			background-color: #cbedf3;
+		}
+		
+		#{$self}__marker {
+			position: absolute;
+			top: calc(50% - 9px);
+			
+			@for $i from 0 through 3 {
+				&:nth-child(#{$i + 1}) {
+					left: calc(30px - (#{$i} * 15px));
+					z-index: calc(4 - #{$i});
+				}
+			}
+		}
+
+		span {
+			display: block;
+			width: fit-content;
+			padding: 2px 0 2px 20px;
+			transition: background-color 0.2s;
+		}
+	}
+}

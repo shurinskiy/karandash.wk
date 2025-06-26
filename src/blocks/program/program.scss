@@ -3,22 +3,24 @@
 .program {
 	$self: &;
 	background-color: #cbedf3;
-
+	
 	&__title.title {
 		background-color: #5796a4;
 	}
-
+	
 	&__items {
-		padding: 60px 0;
+		padding: 62px 0;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		
 		&.container {
 			max-width: 1140px;
 		}
-
+		
 		&_bottom {
-			#{$self}__time {
+			padding-bottom: 130px;
+
+			#{$self}__item h3 {
 				padding-top: 30px;
 			}
 		}
@@ -71,27 +73,24 @@
 			}
 		}
 
-		&_button::before {
-			display: block;
-			border: none;
-			background-color: #f70000;
-			border-radius: 1000px;
-		}
-	}
+		&_button {
 
-	&__time {
-		color: #0e396c;
-		font-weight: 700;
-		font-size: 25px;
-		text-align: center;
-		padding-top: 70px;
-	}
+		}
 	
-	&__text {
-		font-size: 19px;
-		text-align: center;
-		font-weight: 300;
-		color: #000;
+		h3 {
+			color: #0e396c;
+			font-weight: 700;
+			font-size: 25px;
+			text-align: center;
+			padding-top: 70px;
+		}
+		
+		p {
+			font-size: 19px;
+			text-align: center;
+			font-weight: 300;
+			color: #000;
+		}
 	}
 
 	&__subtitle.title {

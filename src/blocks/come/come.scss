@@ -2,23 +2,33 @@
 
 .come {
 	$self: &;
+	gap: 24px;
 	display: flex;
 	align-items: center;
+	flex-flow: column nowrap;
+	background-color: #f70000;
 	justify-content: center;
 	text-decoration: none;
+	border-radius: 1000px;
 	text-align: center;
-	color: #fff;
+	max-width: 290px;
+	aspect-ratio: 1;
+	padding: 0 30px;
+	width: 100%;
 	
 	strong {
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: 28px;
+		color: #fff;
+		padding: 0;
 		z-index: 1;
 	}
 	
 	span {
 		font-size: 14px;
 		font-weight: 300;
+		color: #fff;
 		z-index: 1;
 	}
 }
