@@ -2,7 +2,7 @@
 
 .howto {
 	$self: &;
-	background: url('./images/howto-waves.svg') left bottom -20px / auto repeat-x #fad2db;
+	background: url('./images/howto-waves.svg') center bottom -20px / auto repeat-x #fad2db;
 
 	&__title.title {
 		background-color: #ef5899;
@@ -19,7 +19,7 @@
 		padding: 60px 0 120px;
 		
 		&.container {
-			max-width: 860px;
+			--container: 860px;
 		}
 	}
 

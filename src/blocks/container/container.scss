@@ -9,7 +9,7 @@
 	
 	&_abs {
 		position: absolute;
-		left: max(var(--gap), calc((100% - var(--container)) / 2));
+		left: max(var(--gap), calc((100% - var(--container) - var(--noscroll-target-scrollbar-width, 0px)) / 2));
 	}
 	
 	&_right {

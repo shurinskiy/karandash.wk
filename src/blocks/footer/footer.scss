@@ -1,0 +1,47 @@
+@use 'lib' as *;
+
+.footer {
+	$self: &;
+	padding: 170px 0 115px;
+	background: url('./images/footer-waves.svg') center top / auto repeat-x #0e396c;
+	color: #fff;
+
+	&__cols {
+		display: flex;
+		justify-content: space-between;
+		gap: 24px;
+	}
+
+	&__col {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 16px;
+	}
+
+	&__item {
+
+	}
+
+	&__title {
+		font-size: 20px;
+		font-weight: 700;
+		margin-bottom: 16px;
+	}
+
+	&__link {
+		color: #5796a4;
+		font-weight: 300;
+		font-size: 15px;
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 15px;
+	}
+
+	&__num {
+		font-size: 33px;
+		font-weight: 700;
+		margin-top: auto;
+	}
+}

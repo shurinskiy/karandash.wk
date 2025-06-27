@@ -4,37 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="style.css?v=1750955688134">
+    <link rel="stylesheet" href="style.css?v=1751040350306">
     <title></title>
 </head>
 <body id="home">
-<header class="header ">
-    <div class="header__inner container">
-        <button class="header__toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+<header class="header">
+    <button class="header__toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="header__navi">
+        <button class="header__close">
+            <svg><use xlink:href="#close"></use></svg>
         </button>
-        <div class="header__navi">
-            <button class="header__close">
-                <svg><use xlink:href="#close"></use></svg>
-            </button>
-            <nav class="header__menu">
-                <a class="header__link" href="./">Главная</a>
-                <a class="header__link" href="./">О&#160;фестивале</a>
-                <a class="header__link" href="./">Артисты</a>
-                <a class="header__link" href="./">Программа</a>
-                <a class="header__link" href="./">Карта фестиваля</a>
-                <a class="header__link" href="./">Как добраться и&#160;где жить</a>
-                <a class="header__link" href="./">Новости</a>
-                <a class="header__link" href="./">Организаторы и&#160;партнеры</a>
-                <a class="header__link" href="./">Контакты</a>
-            </nav>
-            <!-- <div class="header__socials">
-				<a class="header__soc" href="./">TG</a>
-				<a class="header__soc" href="./">VK</a>
-			</div> -->
-        </div>
+        <nav class="header__menu">
+            <a class="header__link" href="./">Главная</a>
+            <a class="header__link" href="./">О&#160;фестивале</a>
+            <a class="header__link" href="./">Артисты</a>
+            <a class="header__link" href="./">Программа</a>
+            <a class="header__link" href="./">Карта фестиваля</a>
+            <a class="header__link" href="./">Как добраться и&#160;где жить</a>
+            <a class="header__link" href="./">Новости</a>
+            <a class="header__link" href="./">Организаторы и&#160;партнеры</a>
+            <a class="header__link" href="./">Контакты</a>
+        </nav>
+        <!-- <div class="header__socials">
+			<a class="header__soc" href="./">TG</a>
+			<a class="header__soc" href="./">VK</a>
+		</div> -->
     </div>
 </header>
 
@@ -380,11 +378,102 @@
     </div>
 </section>
 
-<footer class="footer">
+<section class="news">
+    <h2 class="news__title title"><strong>Новости</strong></h2>
+    <div class="news__items container">
+        <div class="news__item card2">
+            <div class="card2__image">
+                <img src="./images/stuff/new-image-1.webp" alt="">
+            </div>
+            <div class="card2__body">
+                <h3 class="card2__title">В&#160;Старице пройдет цирковой фестиваль.</h3>
+                <div class="card2__text">Лучшие современные артисты примут участие в&#160;грандиозном событии этого лета&#8230;</div>
+                <div class="card2__date">22.06.2025</div>
+            </div>
+        </div>
+        <div class="news__item card2">
+            <div class="card2__image">
+                <img src="./images/stuff/new-image-2.webp" alt="">
+            </div>
+            <div class="card2__body">
+                <h3 class="card2__title">ТАСС сообщил о&#160;сценариях обновления Старицы.</h3>
+                <div class="card2__text">Молодые архитекторы Школы дизайна НИУ ВШЭ исследовали городскую среду Старицы при поддержке&#8230;</div>
+                <div class="card2__date">22.06.2025</div>
+            </div>
+        </div>
+        <div class="news__item card2">
+            <div class="card2__image">
+                <img src="./images/stuff/new-image-3.webp" alt="">
+            </div>
+            <div class="card2__body">
+                <h3 class="card2__title">&#171;Ведомости&#187; написали о&#160;новой Старице.</h3>
+                <div class="card2__text">9&#160;сентября 2024 года в&#160;газете &#171;Ведомости&#187; вышла большая статья о&#160;новой жизни Старицы и&#160;ее&#160;ключевом меценате&#8230;</div>
+                <div class="card2__date">22.06.2025</div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="sponsor">
+    <h2 class="sponsor__title title"><strong>Организаторы</strong><span>и&#160;партнеры</span></h2>
+    <div class="sponsor__inner container">
+        <div class="sponsor__row">
+            <a class="sponsor__item" href="./"><img src="./images/stuff/partner-logo-1.webp" alt=""></a>
+            <a class="sponsor__item" href="./"><img src="./images/stuff/partner-logo-2.webp" alt=""></a>
+            <a class="sponsor__item" href="./"><img src="./images/stuff/partner-logo-3.webp" alt=""></a>
+        </div>
+        <hr class="sponsor__hr">
+        <div class="sponsor__row">
+            <a class="sponsor__item" href="./"><img src="./images/stuff/partner-logo-4.webp" alt=""></a>
+            <a class="sponsor__item" href="./"><img src="./images/stuff/partner-logo-5.webp" alt=""></a>
+            <a class="sponsor__item" href="./"><img src="./images/stuff/partner-logo-6.webp" alt=""></a>
+            <a class="sponsor__item" href="./"><img src="./images/stuff/partner-logo-7.webp" alt=""></a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer__cols container">
+        <div class="footer__col">
+            <div class="footer__item">
+                <h2 class="footer__title">Гостям:</h2>
+                <a class="footer__link" href="mailto:hello@karandashfest.ru">hello@karandashfest.ru</a>
+            </div>
+            <div class="footer__item">
+                <div class="footer__text">тел. ///</div>
+            </div>
+            <div class="footer__num">6+</div>
+        </div>
+        <div class="footer__col">
+            <div class="footer__item">
+                <h2 class="footer__title">По&#160;вопросам участия:</h2>
+                <div class="footer__text">
+                    Генеральный продюсер<br>
+                    Андрей Солдаткин
+                </div>
+                <a class="footer__link" href="mailto:soldatkin.moscow@gmail.com">soldatkin.moscow@gmail.com</a>
+            </div>
+            <div class="footer__item">
+                <h2 class="footer__title">СМИ и&#160;блогеры:</h2>
+                <div class="footer__text">
+                    PR-директор<br>
+                    Анна Карабаш
+                </div>
+                <a class="footer__link" href="mailto:karabashanna@gmail.com">karabashanna@gmail.com</a>
+            </div>
+        </div>
+        <div class="footer__col social">
+            <a class="social__link social__link_tgm" href="./">
+                <svg><use xlink:href="#tgm"></use></svg>
+            </a>
+            <a class="social__link social__link_vkt" href="./">
+                <svg><use xlink:href="#vkt"></use></svg>
+            </a>
+        </div>
+    </div>
 </footer>
 
 <svg class="sprite" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 48 48" id="close" xmlns="http://www.w3.org/2000/svg"><path d="M41 10.188 37.812 7 24 20.813 10.187 7 7 10.188 20.813 24 7 37.813 10.188 41 24 27.187 37.813 41 41 37.812 27.187 24 41 10.187Z"/></symbol><symbol viewBox="0 0 48 48" id="tgm" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M35.11 16.31c-.36 3.79-1.92 13-2.72 17.24-.34 1.8-1 2.4-1.64 2.46-1.39.12-2.45-.92-3.79-1.8-2.12-1.38-3.3-2.24-5.36-3.6-2.38-1.55-.84-2.41.52-3.81.36-.36 6.5-6 6.62-6.46a.48.48 0 0 0-.12-.42.55.55 0 0 0-.5 0c-.22 0-3.58 2.28-10.12 6.7a4.46 4.46 0 0 1-2.59 1 17.316 17.316 0 0 1-3.74-.88c-1.5-.48-2.7-.74-2.6-1.58.06-.44.66-.88 1.78-1.34 7-3 11.65-5.06 14-6 6.65-2.78 8.05-3.26 9-3.28a1.61 1.61 0 0 1 .94.28c.19.172.31.406.34.66.027.276.02.555-.02.83Z"/></symbol><symbol viewBox="0 0 48 48" id="vkt" xmlns="http://www.w3.org/2000/svg"><path d="M25.44 34C14.5 34 8.26 26.48 8 14h5.48c.18 9.16 4.22 13 7.42 13.84V14h5.16v7.9c3.16-.34 6.48-3.9 7.6-7.9h5.16a15.239 15.239 0 0 1-7 10A15.79 15.79 0 0 1 40 34h-5.66a9.87 9.87 0 0 0-8.28-7.14V34h-.62Z"/></symbol></svg>
-<script src="common.js?v=1750955688134"></script>
+<script src="common.js?v=1751040350306"></script>
 </body>
 </html>

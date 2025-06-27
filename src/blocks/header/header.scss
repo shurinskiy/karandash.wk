@@ -3,13 +3,12 @@
 .header {
 	$self: &;
 	--max: 360px;
-	padding-right: calc(var(--noscroll-target-scrollbar-width, 0px));
-	position: fixed;
+	--container: 1720px;
 	z-index: 12;
+	position: fixed;
 	top: 0;
-	left: 0;
-	width: 100%;
-
+	left: max(var(--gap), calc((100% - var(--container) - var(--noscroll-target-scrollbar-width, 0px)) / 2));
+	
 	&__inner {
 
 	}

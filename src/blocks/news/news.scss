@@ -1,0 +1,31 @@
+@use 'lib' as *;
+
+.news {
+	$self: &;
+	
+	&__title.title {
+		background-color: #0e396c;
+	}
+	
+	&__items {
+		padding: 60px 0 125px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 36px;
+
+		&.container {
+			--container: 1265px;
+		}
+	}
+
+	&__item.card2 {
+
+		&:first-child {
+			align-items: flex-end;
+		}
+		
+		&:last-child {
+			align-items: flex-start;
+		}
+	}
+}

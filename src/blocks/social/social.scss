@@ -1,0 +1,28 @@
+@use 'lib' as *;
+
+.social {
+	$self: &;
+	justify-content: space-around;
+
+	&__link {
+		width: 70px;
+		height: 70px;
+		flex-shrink: 0;
+		background-color: #5594a3;
+
+		&_tgm {
+			border-radius: 1000px;
+		}
+		
+		&_vkt {
+			border-radius: 18px;
+		}
+
+		svg {
+			width: 100%;
+			height: 100%;
+			fill: #fff;
+			object-fit: cover;
+		}
+	}
+}

@@ -8,6 +8,10 @@
 		position: relative;
 		display: flex;
 		justify-content: space-between;
+
+		&.container {
+			--container: 1720px;
+		}
 	}
 
 	&__date {

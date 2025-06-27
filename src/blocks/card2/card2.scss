@@ -1,0 +1,56 @@
+@use 'lib' as *;
+
+.card2 {
+	$self: &;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+
+	&__image {
+		width: 100%;
+		height: 235px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+		}
+	}
+
+	&__body {
+		background-color: #cbedf3;
+		width: calc(100% - 60px);
+		position: relative;
+		padding: 40px 40px 23px;
+		flex-grow: 1;
+		
+		&::before {
+			position: absolute;
+			display: block;
+			content: '';
+			background-color: #cbedf3;
+			height: 60px;
+			width: 70px;
+			bottom: 100%;
+			left: 0;
+		}
+	}
+
+	&__title {
+		font-size: 20px;
+		font-weight: 700;
+		color: #000;
+	}
+	
+	&__text {
+		font-size: 20px;
+		font-weight: 300;
+		margin-bottom: 20px;
+	}
+	
+	&__date {
+		font-weight: 700;
+		color: #000;
+	}
+}
