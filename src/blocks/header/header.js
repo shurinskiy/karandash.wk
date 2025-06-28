@@ -16,7 +16,10 @@ import { driveMenu } from "../../js/libs/driveMenu";
 			disablePageScroll();
 			toggle.classList.add('opened');
 			document.body.classList.add('underlay');
-
+	
+			this.querySelectorAll('a.header__link[href*="#"]').forEach(link => {
+				link.addEventListener('click', (e) => menu.menuClose(e));
+			});
 		},
 		close: function() {
 			enablePageScroll();

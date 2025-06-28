@@ -44,9 +44,9 @@
 
 body, html {
 	// scrollbar-gutter: stable;
-	// scroll-behavior: smooth;	
+	scroll-behavior: smooth;	
 	box-sizing: border-box;
-	background-color: var(--background);
+	background-color: #fff;
 	font-size: var(--size);
 	color: var(--text);
 	font-family: "GL", sans-serif;
@@ -55,15 +55,15 @@ body, html {
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
+	
+	/* &:has(#home) {
+		scroll-behavior: smooth;	
+	} */
 }
 
 body {
 	overflow-x: hidden;
 	position: relative;
-
-	&[data-noscroll-target-scroll-disabled] {
-
-	}
 	
 	&.underlay {
 		&::before {

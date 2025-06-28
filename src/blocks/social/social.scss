@@ -3,19 +3,22 @@
 .social {
 	$self: &;
 	justify-content: space-around;
+	align-items: flex-end;
+	max-width: 170px;
+	width: 100%;
 
 	&__link {
-		width: 70px;
-		height: 70px;
+		width: 68px;
+		height: 68px;
 		flex-shrink: 0;
-		background-color: #5594a3;
-
+		
 		&_tgm {
 			border-radius: 1000px;
+			background-color: #5594a3;
 		}
 		
 		&_vkt {
-			border-radius: 18px;
+			background: url('./images/tgm-bg.svg') center / contain no-repeat transparent;
 		}
 
 		svg {

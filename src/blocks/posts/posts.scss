@@ -1,0 +1,46 @@
+@use 'lib' as *;
+
+.posts {
+	$self: &;
+	padding: 110px 0;
+
+	&__title.title {
+		background-color: #0e396c;
+	}
+
+	&__inner {
+		&.container {
+			--container: 1260px;
+		}
+	}
+
+	&__items {
+		padding: 62px 0;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 60px 36px;
+		
+		@include media('<=lg') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__item {
+
+		&.card2 {
+			@include media('>lg') {
+				&:nth-child(3n + 1) {
+					align-items: flex-end;
+				}
+				
+				&:nth-child(3n) {
+					align-items: flex-start;
+				}
+			}
+		}
+	}
+
+	&__pagination {
+
+	}
+}
