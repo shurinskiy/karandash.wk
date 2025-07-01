@@ -2,32 +2,63 @@
 
 .location {
 	$self: &;
-	padding-bottom: 112px;
-
+	--ht: 775px;
+	--vc: 1;
+	
 	&__title.title {
+		position: relative;
 		background-color: #058a44;
-
+		
 		span {
 			color: #fff;
-		}
-	}
 
+			@include media('<=md') {
+				position: absolute;
+				color: #058a44;
+				line-height: 0.7;
+				top: 100%;
+				z-index: 1;
+			}
+		}
+
+	}
+	
 	&__inner {
-		max-width: 1140px;
+		padding-bottom: 112px;
 		display: flex;
 		align-items: flex-start;
 		gap: 65px;
+		
+		@include media('<=lg') {
+			gap: 35px;
+		}
+
+		@include media('<=md') {
+			padding: 60px 0 50px;
+			display: block;
+		}
+
+		@include media('<=xxs') {
+			padding: 35px 0 25px;
+			display: block;
+		}
 	}
 
 	&__map {
 		position: relative;
-		height: 755px;
-
-		img {
-			width: 100%;
-			height: 100%;
-			display: block;
-			object-fit: cover;
+		overflow: hidden;
+		background: url('./images/location-map.webp') center / auto no-repeat transparent;
+		background-size: auto calc(var(--ht) * var(--vc));
+		flex-grow: 1;
+		height: calc(var(--ht) * var(--vc));
+		
+		@include media('<=md') {
+			--vc: 0.65;
+		}
+		
+		@include media('<=xxs') {
+			margin: 0 calc(var(--gap) * -1);
+			--vc: 0.5;
 		}
 
 		#{$self}__marker {
@@ -42,108 +73,108 @@
 			}
 
 			&:nth-child(1) {
-				top: calc(50% - 275px);
-				left: calc(50% + 105px);
+				top: calc(50% - 275px * var(--vc));
+				left: calc(50% + 105px * var(--vc));
 			}
 			
 			&:nth-child(2) {
-				top: calc(50% - 258px);
-				left: calc(50% - 90px);
+				top: calc(50% - 258px * var(--vc));
+				left: calc(50% - 90px * var(--vc));
 			}
 			
 			&:nth-child(3) {
-				top: calc(50% - 258px);
-				left: calc(50% - 75px);
+				top: calc(50% - 258px * var(--vc));
+				left: calc(50% - 75px * var(--vc));
 			}
 			
 			&:nth-child(4) {
-				top: calc(50% - 258px);
-				left: calc(50% - 60px);
+				top: calc(50% - 258px * var(--vc));
+				left: calc(50% - 60px * var(--vc));
 			}
 
 			&:nth-child(5) {
-				top: calc(50% - 293px);
-				left: calc(50% + 65px);
+				top: calc(50% - 293px * var(--vc));
+				left: calc(50% + 65px * var(--vc));
 			}
 
 			&:nth-child(6) {
-				top: calc(50% - 218px);
-				left: calc(50% - 150px);
+				top: calc(50% - 218px * var(--vc));
+				left: calc(50% - 150px * var(--vc));
 			}
 			
 			&:nth-child(7) {
-				top: calc(50% - 260px);
-				left: calc(50% - 205px);
+				top: calc(50% - 260px * var(--vc));
+				left: calc(50% - 205px * var(--vc));
 			}
 			
 			&:nth-child(8) {
-				top: calc(50% - 172px);
-				left: calc(50% - 120px);
+				top: calc(50% - 172px * var(--vc));
+				left: calc(50% - 120px * var(--vc));
 			}
 			
 			&:nth-child(9) {
-				top: calc(50% - 90px);
-				left: calc(50% - 80px);
+				top: calc(50% - 90px * var(--vc));
+				left: calc(50% - 80px * var(--vc));
 			}
 
 			&:nth-child(10) {
-				top: calc(50% - 75px);
-				left: calc(50% - 138px);
+				top: calc(50% - 75px * var(--vc));
+				left: calc(50% - 138px * var(--vc));
 			}
 
 			&:nth-child(11) {
-				top: calc(50% - 68px);
-				left: calc(50% - 115px);
+				top: calc(50% - 68px * var(--vc));
+				left: calc(50% - 115px * var(--vc));
 			}
 
 			&:nth-child(12) {
-				top: calc(50% - 68px);
-				left: calc(50% - 102px);
+				top: calc(50% - 68px * var(--vc));
+				left: calc(50% - 102px * var(--vc));
 			}
 
 			&:nth-child(13) {
-				top: calc(50% - 28px);
-				left: calc(50% - 198px);
+				top: calc(50% - 28px * var(--vc));
+				left: calc(50% - 198px * var(--vc));
 			}
 
 			&:nth-child(14) {
-				top: calc(50% - 28px);
-				left: calc(50% - 184px);
+				top: calc(50% - 28px * var(--vc));
+				left: calc(50% - 184px * var(--vc));
 			}
 
 			&:nth-child(15) {
-				top: calc(50% + 35px);
-				left: calc(50% - 119px);
+				top: calc(50% + 35px * var(--vc));
+				left: calc(50% - 119px * var(--vc));
 			}
 
 			&:nth-child(16) {
-				top: calc(50% + 35px);
-				left: calc(50% - 138px);
+				top: calc(50% + 35px * var(--vc));
+				left: calc(50% - 138px * var(--vc));
 			}
 
 			&:nth-child(17) {
-				top: calc(50% + 10px);
-				left: calc(50% - 75px);
+				top: calc(50% + 10px * var(--vc));
+				left: calc(50% - 75px * var(--vc));
 			}
 
 			&:nth-child(18) {
-				top: calc(50% + 110px);
-				left: calc(50% - 93px);
+				top: calc(50% + 110px * var(--vc));
+				left: calc(50% - 93px * var(--vc));
 			}
 
 			&:nth-child(19) {
-				top: calc(50% + 188px);
-				left: calc(50% - 75px);
+				top: calc(50% + 188px * var(--vc));
+				left: calc(50% - 75px * var(--vc));
 			}
 
 			&:nth-child(20) {
-				top: calc(50% + 85px);
-				left: calc(50% + 38px);
+				top: calc(50% + 85px * var(--vc));
+				left: calc(50% + 38px * var(--vc));
 			}
 
 			&:nth-child(21) {
-				top: calc(50% + 268px);
-				left: calc(50% - 147px);
+				top: calc(50% + 268px * var(--vc));
+				left: calc(50% - 147px * var(--vc));
 			}
 		}
 	}
@@ -176,7 +207,24 @@
 
 	&__items {
 		width: 345px;
-		padding-top: 45px;
+		flex-shrink: 0;
+		padding-top: 40px;
+		
+		@include media('<=md') {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			align-items: center;
+			grid-gap: 0 24px;
+			width: auto;
+		}
+		
+		@include media('<=xs') {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		
+		@include media('<=xxs') {
+			padding-top: 25px;
+		}
 	}
 
 	&__item {
@@ -187,6 +235,16 @@
 		color: #000;
 		cursor: pointer;
 		line-height: 1.18;
+		
+		@include media('<=md') {
+			padding: 5px 0 5px 40px;
+			font-size: 16px;
+		}
+		
+		@include media('<=xs') {
+			padding: 3px 0 3px 40px;
+			font-size: 15px;
+		}
 
 		&.active span {
 			background-color: #cbedf3;

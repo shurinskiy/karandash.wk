@@ -4,18 +4,46 @@
 	$self: &;
 	padding: 170px 0 115px;
 	background: url('./images/footer-waves.svg') center top / auto repeat-x #0e396c;
+	background-size: fluid(270px, 100px);
 	color: #fff;
+	
+	@include media('<=xs') {
+		padding: 130px 0 50px;
+	}
 
 	&__cols {
 		display: flex;
 		justify-content: space-between;
 		gap: 24px;
+
+		@include media('<=xs') {
+			flex-flow: column nowrap;
+		}
 	}
 
 	&__col {
 		display: flex;
 		flex-flow: column nowrap;
 		gap: 16px;
+		
+		&_social {
+			justify-content: space-around;
+			align-items: flex-end;
+			max-width: 170px;
+			width: 100%;
+			
+			@include media('<=sm') {
+				max-width: none;
+				width: auto;
+			}
+			
+			@include media('<=xs') {
+				align-items: center;
+				flex-flow: row nowrap;
+				justify-content: flex-start;
+				gap: 24px;
+			}
+		}
 	}
 
 	&__item {
@@ -43,5 +71,9 @@
 		font-size: 33px;
 		font-weight: 700;
 		margin-top: auto;
+
+		@include media('<=xs') {
+			margin: 0 0 0 auto;
+		}
 	}
 }

@@ -3,13 +3,38 @@
 .howto {
 	$self: &;
 	background: url('./images/howto-waves.svg') center bottom -20px / auto repeat-x #fad2db;
+	background-position: center bottom fluid(-20px, -5px);
+	background-size: fluid(270px, 100px);
 
 	&__title.title {
 		background-color: #ef5899;
+		position: relative;
 		
 		span {
 			color: #fff;
 			margin: -15px 0;
+			font-size: fluid(50px, 26px, xxxlg, lg);
+			
+			@include media('<=md') {
+				font-size: fluid(26px, 18px, md, sm);
+			}
+			
+			@include media('<=sm') {
+				font-size: fluid(18px, 16px, sm, xxxs);
+			}
+			
+			@include media('<=xs') {
+				color: #ef5899;
+				position: absolute;
+				line-height: 0.7;
+				margin: 0;
+				top: 100%;
+				z-index: 1;
+
+				br {
+					display: none;
+				}
+			}
 		}
 	}
 
@@ -18,19 +43,45 @@
 		grid-template-columns: repeat(3, 1fr);
 		padding: 60px 0 120px;
 		
+		@include media('<=sm') {
+			grid-template-columns: repeat(2, 1fr);
+			padding: 60px 0;
+		}
+		
+		@include media('<=xs') {
+			padding: 65px 0 60px;
+		}
+
+		@include media('<=xxs') {
+			grid-template-columns: 1fr;
+			padding: 45px 0 35px;
+		}
+		
 		&.container {
-			--container: 860px;
+
+			@include media('<=xxs') {
+				--container: 300px;
+			}
 		}
 	}
 
 	&__item {
-		padding: 0 50px;
+		margin: 0 -1px -2px;
+		padding: 0 fluid(50px, 15px, md, sm);
 		display: flex;
 		align-items: center;
 		flex-flow: column nowrap;
 		position: relative;
 		aspect-ratio: 1;
 		gap: 20px;
+				
+		@include media('<=sm') {
+			padding: 0 fluid(50px, 20px, sm, xxs);
+		}
+
+		@include media('<=xxs') {
+			justify-content: center;
+		}
 
 		&::before {
 			display: none;
@@ -50,8 +101,26 @@
 			display: block;
 		}
 
-		&_button {
-			
+		&_come {
+
+			&.come {
+				font-size: fluid(28px, 24px, md, sm);
+				max-width: none;
+				
+				@include media('<=sm') {
+					font-size: fluid(28px, 20px, sm, xxs);
+				}
+				
+				@include media('<=xxs') {
+					font-size: fluid(30px, 26px, xxs, xxxs);
+				}
+				
+				span {
+					@include media('<=xxs') {
+						font-size: fluid(17px, 14px, xxs, xxxs);
+					}
+				}
+			}
 		}
 
 		h3 {
@@ -59,14 +128,31 @@
 			text-align: center;
 			color: #ef5899;
 			font-weight: 700;
-			font-size: 20px;
+			font-size: fluid(20px, 18px, md, sm);
+				
+			@include media('<=sm') {
+				font-size: fluid(22px, 17px, sm, xxs);
+				padding-top: fluid(100px, 40px, sm, xxs);
+			}
+			
+			@include media('<=xxs') {
+				font-size: fluid(22px, 20px, xxs, xxxs);
+				padding: 0;
+			}
 		}
-
+		
 		p {
-			text-align: center;
-			// font-weight: 300;
-			font-size: 15px;
 			color: #000;
+			text-align: center;
+			font-size: fluid(15px, 13px, md, sm);
+				
+			@include media('<=sm') {
+				font-size: fluid(15px, 11px, sm, xxs);
+			}
+			
+			@include media('<=xxs') {
+				font-size: fluid(15px, 13px, xxs, xxxs);
+			}
 		}
 	}
 }

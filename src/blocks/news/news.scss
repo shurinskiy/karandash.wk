@@ -8,17 +8,41 @@
 	}
 	
 	&__items {
-		padding: 60px 0 125px;
 		display: grid;
+		grid-gap: 0 36px;
+		padding: 60px 0 125px;
 		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 36px;
+		
+		@include media('<=xlg') {
+			grid-gap: 0 24px;
+		}
+		
+		@include media('<=md') {
+			grid-gap: 16px;
+		}
+		
+		@include media('<=sm') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=xs') {
+			padding: 60px 0;
+		}
+		
+		@include media('<=xxs') {
+			grid-template-columns: 1fr;
+			padding: 35px 0;
+		}
 
 		&.container {
-			--container: 1265px;
+			--container: 1260px;
 		}
 	}
 
-	&__item.card2 {
+	&__item {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
 
 		&:first-child {
 			align-items: flex-end;
@@ -27,5 +51,95 @@
 		&:last-child {
 			align-items: flex-start;
 		}
+
+		&:nth-child(even) {
+			
+			#{$self}__body::before {
+				@include media('<=xxs') {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: 235px;
+		
+		@include media('<=lg') {
+			height: 200px;
+		}
+		
+		@include media('<=sm') {
+			height: 230px;
+		}
+		
+		@include media('<=xs') {
+			height: 200px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+		}
+	}
+
+	&__body {
+		background-color: #cbedf3;
+		width: calc(100% - 60px);
+		padding: 40px 40px 23px;
+		position: relative;
+		flex-grow: 1;
+		display: flex;
+		flex-flow: column nowrap;
+
+		@include media('<=xlg') {
+			width: 100%;
+			padding: fluid(30px, 16px, xlg, md);
+		}
+		
+		&::before {
+			display: block;
+			position: absolute;
+			bottom: 100%;
+			left: 0;
+			content: '';
+			background-color: #cbedf3;
+			aspect-ratio: 1.15;
+			width: fluid(70px, 45px, xlg, sm);
+		}
+	}
+
+	&__subtitle {
+		font-size: fluid(20px, 16px, xlg, md);
+		font-weight: 700;
+		color: #000;
+		
+		@include media('<=xxs') {
+			font-size: fluid(19px, 16px, xxs, xxxs);
+		}
+	}
+	
+	&__text {
+		font-size: fluid(20px, 15px, xlg, md);
+		margin-bottom: 20px;
+		font-weight: 300;
+		
+		@include media('<=xs') {
+			font-size: 13px;
+		}
+
+		@include media('<=xxs') {
+			font-size: fluid(17px, 15px, xxs, xxxs);
+		}
+	}
+	
+	&__date {
+		font-weight: 700;
+		margin-top: auto;
+		color: #000;
 	}
 }

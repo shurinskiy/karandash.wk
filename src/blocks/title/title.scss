@@ -12,19 +12,24 @@
 
 	strong {
 		display: block;
-		font-size: 235px;
 		font-weight: 300;
 		line-height: 0.69;
+		white-space: nowrap;
+		font-size: fluid(235px, 40px, xxxlg, xxxs);
 		letter-spacing: 0.03em;
 		margin-bottom: -5px;
 		color: #fff;
 		z-index: 1;
+		
+		@include media('<=md') {
+			margin: 0;
+		}
 	}
 	
 	span {
-		font-size: 50px;
-		font-weight: 700;
+		font-size: fluid(50px, 16px, lg, xxxs);
 		line-height: 1.25;
+		font-weight: 700;
 		text-align: left;
 	}
 }

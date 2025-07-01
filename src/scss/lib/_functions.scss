@@ -1,6 +1,21 @@
-@use "sass:meta";
+@use "variables.scss" as *;
 @use "sass:string";
+@use "sass:meta";
 @use 'sass:math';
+@use "sass:map";
+
+// определить сопоставление из глобальной перменной $matches
+@function use-matches($value) {
+	@if meta.type-of($value) == 'string' or meta.type-of($value) == 'identifier' {
+		@if map.has-key($matches, $value) {
+			@return map.get($matches, $value);
+		} @else {
+			@error "Breakpoint `#{$value}` not found in \$matches map.";
+		}
+	} @else {
+		@return $value;
+	}
+}
 
 // Замена подстроки в строке
 @function str-replace($string, $search, $replace: '') {
@@ -54,6 +69,9 @@
 
 // плавное изменение размера на заданном диапазоне ширины экрана (без медиазапросов, через clamp)
 @function fluid($max, $min, $maxWidth: 1440, $minWidth: 480) {
+	$maxWidth: use-matches($maxWidth);
+	$minWidth: use-matches($minWidth);
+
 	$slope: math.div(num($max - $min), num($maxWidth - $minWidth));
 	$yAxisIntersection: -$minWidth * $slope + $min;
 
@@ -62,18 +80,22 @@
 
 // плавное изменение размера на заданном диапазоне ширины экрана (без медиазапросов, через clamp с преобразованием в rem)
 @function fluid-rem($max: 100, $min: 10, $maxViewportWidth: 1440, $minViewportWidth: 480) {
+	$maxViewportWidth: use-matches($maxViewportWidth);
+	$minViewportWidth: use-matches($minViewportWidth);
+
 	$maxSize: math.div($max, 16);
 	$minSize: math.div($min, 16);
+
 	$maxWidth: math.div($maxViewportWidth, 16);
 	$minWidth: math.div($minViewportWidth, 16);
-  
+
 	$slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
 	$yAxisIntersection: -$minWidth * $slope + $minSize;
-  
+
 	@return clamp(
-		#{$minSize * 1rem},
-		#{$yAxisIntersection * 1rem} + #{$slope * 100vw},
-		#{$maxSize * 1rem}
+		#{$minSize}rem,
+		#{$yAxisIntersection}rem + #{$slope * 100}vw,
+		#{$maxSize}rem
 	);
 }
 

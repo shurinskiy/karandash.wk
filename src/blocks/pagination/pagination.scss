@@ -6,7 +6,6 @@
 	align-items: center;
 	justify-content: center;
 
-	
 	&__link {
 		display: flex;
 		align-items: center;
@@ -16,9 +15,13 @@
 		font-size: 20px;
 		height: 40px;
 		width: 40px;
-
+		
 		&.current {
 			font-weight: 700;
+		}
+		
+		@include media('<=xs') {
+			font-size: 16px;
 		}
 	}
 	
@@ -28,6 +31,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		
+		@include media('<=xs') {
+			width: 40px;
+		}
 
 		&_prev {
 			justify-content: flex-start;
@@ -42,6 +49,10 @@
 			aspect-ratio: 1;
 			fill: #0e396c;
 			width: 28px;
+		
+			@include media('<=xs') {
+				width: 20px;
+			}
 		}
 
 		&.disabled svg {

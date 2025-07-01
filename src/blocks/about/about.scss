@@ -9,26 +9,82 @@
 
 	&__inner {
 		padding-top: 60px;
+		
+		@include media('<=sm') {
+			padding: 60px 0;
+		}
+		
+		@include media('<=xxs') {
+			padding: 35px 0;
+		}
+
+		&.container {
+			--container: 1250px;
+		}
 	}
 
 	&__cards {
 		display: flex;
-		margin-bottom: 35px;
 		justify-content: center;
+
+		@include media('<=sm') {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__card {
-		width: 415px;
+
+		&.card1 {
+			font-size: fluid(20px, 15px, xlg, md);
+			width: 415px;
+			
+			@include media('<=sm','>xxs') {
+				&:nth-child(1) {
+					margin-right: auto;
+				}
+				
+				&:nth-child(2) {
+					margin-left: auto;
+				}
+				
+				&:nth-child(3) {
+					margin-right: auto;
+				}
+			}
+			
+			@include media('<=sm') {
+				font-size: fluid(20px, 16px, sm, xxs);
+			}
+		}
 	}
 
 	&__think {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		@include media('<=sm') {
+			flex-flow: column nowrap;
+			margin-left: auto;
+			width: fit-content;
+		}
+
+		@include media('<=xxs') {
+			margin: 0 auto;
+		}
+		
+		@include media('<=xxxs') {
+			width: 100%;
+		}
 	}
 
 	&__clawn {
 		z-index: 1;
+		width: fluid(305px, 190px, xlg, xxs);
+		
+		@include media('<=sm') {
+			margin-bottom: -10px;
+		}
 		
 		img {
 			display: block;
@@ -36,26 +92,40 @@
 	}
 
 	&__motive {
-		width: 780px;
-		flex-shrink: 0;
-		padding: 75px 70px 60px;
-		background-color: #cbedf3;
-		clip-path: polygon(3% 12%, 41% 0, 88% 5%, 100% 28%, 98% 90%, 67% 100%, 5% 95%, 0 64%);
-		text-align: right;
 		display: flex;
 		flex-flow: column nowrap;
+		flex-shrink: 0;
 		gap: 24px;
+		max-width: 100%;
+		width: fit-content;
 		margin: 0 0 15px -70px;
+		padding: 1.8em 1.7em 1.4em 1.9em;
+		clip-path: polygon(3% 12%, 41% 0, 88% 5%, 100% 28%, 98% 90%, 67% 100%, 5% 95%, 0 64%);
+		background-color: #cbedf3;
 		color: #000;
+		text-align: right;
+		font-size: fluid(42px, 17px, xlg, xxxs);
+		
+		@include media('<=sm') {
+			margin: 0;
+		}
+		
+		@include media('<=xxxs') {
+			padding: 30px 20px;
+			font-size: 16px;
+			width: 100%;
+			gap: 10px;
+		}
 
 		strong {
 			display: block;
-			font-size: 42px;
+			letter-spacing: -0.015em;
 		}
 		
 		span {
 			display: block;
-			font-size: 25px;
+			font-size: fluid(25px, 12px, md, xxxs);
+			letter-spacing: -0.025em;
 			font-style: italic;
 			font-weight: 600;
 		}

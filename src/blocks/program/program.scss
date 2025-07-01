@@ -9,31 +9,100 @@
 	}
 	
 	&__items {
-		padding: 62px 0;
+		padding: 60px 0;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		
+		@include media('<=lg') {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		
+		@include media('<=sm') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=xxs') {
+			grid-template-columns: 1fr;
+			padding: 35px 0;
+		}
+		
 		&.container {
-			max-width: 1140px;
+
+			@include media('<=xxs') {
+				--container: 300px;
+			}
 		}
 		
 		&_bottom {
-			padding-bottom: 130px;
+			padding: 20px 0 125px;
+			
+			@include media('<=md') {
+				padding: 20px 0 60px;
+			}
+			
+			@include media('<=xxs') {
+				padding: 0 0 35px;
+			}
 
-			#{$self}__item h3 {
-				padding-top: 30px;
+			#{$self}__item {
+
+				@include media('<=xs') {
+					padding: 0 20px;
+				}
+
+				@include media('<=xxs') {
+					gap: 16px;
+				}
+				
+				&:last-child {
+					@include media('<=md', '>sm') {
+						grid-column: 2;
+					}
+				}
+
+				h3 {
+					padding-top: 30px;
+					
+					@include media('<=lg') {
+						padding-top: fluid(70px, 30px, lg, md);
+					}
+					
+					@include media('<=sm') {
+						padding-top: fluid(70px, 30px, sm, xs);
+					}
+
+					@include media('<=xxs') {
+						padding: 0;
+					}
+				}
+				
+				p {
+					@include media('<=sm') {
+						font-size: fluid(20px, 13px, sm, xs);
+					}
+
+					@include media('<=xxs') {
+						font-size: fluid(18px, 15px, xxs, xxxs);
+					}
+				}
 			}
 		}
 	}
 
 	&__item {
+		margin: 0 -1px -2px;
 		padding: 0 30px;
 		display: flex;
 		align-items: center;
 		flex-flow: column nowrap;
+		grid-column: span 1;
 		position: relative;
 		aspect-ratio: 1;
 		gap: 24px;
+
+		@include media('<=xxs') {
+			justify-content: center;
+		}
 
 		&::before {
 			display: none;
@@ -54,6 +123,19 @@
 		}
 		
 		&_corner {
+
+			@include media('<=lg') {
+				display: none;
+			}
+
+			@include media('<=sm') {
+				display: block;
+			}
+
+			@include media('<=xxs') {
+				display: none;
+			}
+
 			&::before {
 				display: block;
 				border-bottom: none;
@@ -73,27 +155,90 @@
 			}
 		}
 
-		&_button {
-
+		&_come {
+			
+			&.come {
+				max-width: none;
+				font-size: fluid(28px, 26px, xlg, lg);
+				
+				@include media('<=lg') {
+					font-size: fluid(28px, 22px, lg, md);
+					grid-column: 2;
+				}
+				
+				@include media('<=sm') {
+					font-size: fluid(28px, 20px, sm, xxs);
+					gap: fluid(24px, 16px, sm, xxs);
+					grid-column: auto;
+				}
+				
+				@include media('<=xxs') {
+					font-size: fluid(30px, 26px, xxs, xxxs);
+				}
+				
+				span {
+					@include media('<=xxs') {
+						font-size: fluid(17px, 14px, xxs, xxxs);
+					}
+				}
+			}
 		}
 	
 		h3 {
 			color: #0e396c;
 			font-weight: 700;
-			font-size: 25px;
-			text-align: center;
 			padding-top: 70px;
+			text-align: center;
+			font-size: fluid(25px, 24px, xlg, lg);
+			
+			@include media('<=lg') {
+				font-size: fluid(25px, 22px, lg, md);
+				padding-top: fluid(80px, 60px, lg, md);
+			}
+			
+			@include media('<=sm') {
+				padding-top: fluid(100px, 50px, sm, xxs);
+				font-size: fluid(25px, 22px, sm, xxs);
+			}
+			
+			@include media('<=xxs') {
+				font-size: fluid(30px, 28px, xxs, xxxs);
+				padding: 0;
+			}
 		}
 		
 		p {
-			font-size: 19px;
+			font-size: fluid(19px, 17px, xlg, lg);
 			text-align: center;
 			font-weight: 300;
 			color: #000;
+
+			@include media('<=lg') {
+				font-size: fluid(19px, 16px, lg, md);
+			}
+			
+			@include media('<=sm') {
+				font-size: fluid(20px, 14px, sm, xxs);
+			}
+			
+			@include media('<=xxs') {
+				font-size: fluid(18px, 16px, xxs, xxxs);
+			}
 		}
 	}
 
 	&__subtitle.title {
+		position: relative;
 		color: #f70000;
+		margin-bottom: 50px;
+
+		span {
+			@include media('<=lg') {
+				position: absolute;
+				line-height: 1.0;
+				top: 100%;
+				z-index: 1;
+			}
+		}
 	}
 }

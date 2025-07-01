@@ -18,14 +18,28 @@
 		display: flex;
 		flex-flow: column nowrap;
 		gap: 9px;
+		
+		@include media('<=sm') {
+			gap: 6px;
+		}
 
 		&::before {
 			display: block;
 			content: '';
 			width: 100px;
 			aspect-ratio: 1;
-			background: svg-url('<svg width="48" height="56" viewBox="0 0 48 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.4454 55.999L0 48.1309L0.561039 44.724L11.9065 46.6043C12.3995 44.977 12.8752 43.4008 13.3338 41.8756C18.1875 25.8052 21.3926 15.19 24.2322 8.83983C26.5021 3.76188 29.3503 -0.809358 34.7651 0.119983C39.5844 0.947981 40.3411 5.875 40.4399 11.0759C40.5646 17.5769 39.5952 27.7566 37.9873 44.6205C37.7981 46.6014 37.6011 48.6721 37.3961 50.8327L48 52.5922L47.4454 55.999ZM15.3329 47.1735L33.9955 50.2677C34.1933 48.192 34.3832 46.1996 34.5652 44.2906C36.1064 28.1188 37.1253 17.4454 37.0049 11.1427C36.8674 3.98397 35.2573 3.70797 34.1911 3.52469C32.4005 3.2185 30.3993 3.48372 27.3748 10.2522C24.6255 16.4018 21.4442 26.935 16.627 42.8783C16.2085 44.2669 15.7772 45.6987 15.3329 47.1735Z" fill="white"/></svg>') center / auto no-repeat #f70000;
+			background: svg-url('<svg width="52" height="60" viewBox="0 0 52 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.4454 55.999L0 48.1309L0.561039 44.724L11.9065 46.6043C12.3995 44.977 12.8752 43.4008 13.3338 41.8756C18.1875 25.8052 21.3926 15.19 24.2322 8.83983C26.5021 3.76188 29.3503 -0.809358 34.7651 0.119983C39.5844 0.947981 40.3411 5.875 40.4399 11.0759C40.5646 17.5769 39.5952 27.7566 37.9873 44.6205C37.7981 46.6014 37.6011 48.6721 37.3961 50.8327L48 52.5922L47.4454 55.999ZM15.3329 47.1735L33.9955 50.2677C34.1933 48.192 34.3832 46.1996 34.5652 44.2906C36.1064 28.1188 37.1253 17.4454 37.0049 11.1427C36.8674 3.98397 35.2573 3.70797 34.1911 3.52469C32.4005 3.2185 30.3993 3.48372 27.3748 10.2522C24.6255 16.4018 21.4442 26.935 16.627 42.8783C16.2085 44.2669 15.7772 45.6987 15.3329 47.1735Z" fill="white"/></svg>') center / 55% auto no-repeat #f70000;
 			margin-bottom: 4px;
+			
+			@include media('<=sm') {
+				margin-bottom: 2px;
+				width: 70px;
+			}
+			
+			@include media('<=xxs') {
+				background-size: 60% auto;
+				width: 50px;
+			}
 		}
 
 		span {
@@ -33,6 +47,14 @@
 			width: 100%;
 			height: 9px;
 			background-color: #f70000;
+			
+			@include media('<=sm') {
+				height: 6px;
+			}
+			
+			@include media('<=xxs') {
+				height: 5px;
+			}
 		}
 	}
 
@@ -53,6 +75,14 @@
 		font-weight: 700;
 		font-size: 25px;
 		gap: 30px;
+		
+		@include media('<=xxs') {
+			padding: 30px 0 30px 60px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 21px;
+		}
 
 		&::-webkit-scrollbar {
 			width: 3px;
@@ -100,15 +130,20 @@
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: center;
+		padding-right: 20px;
 		flex-grow: 1;
 		gap: 10px;
+		
+		@include media('<=xxxs') {
+			gap: 3px;
+		}
 	}
 
 	&__link {
 		text-transform: uppercase;
 		text-decoration: none;
-		color: #fff;
 		padding: 10px 0;
+		color: #fff;
 
 		&:hover {
 			text-decoration: underline;

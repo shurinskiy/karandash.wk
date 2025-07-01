@@ -3,6 +3,10 @@
 .posts {
 	$self: &;
 	padding: 110px 0;
+	
+	@include media('<=xxs') {
+		padding: 100px 0 30px;
+	}
 
 	&__title.title {
 		background-color: #0e396c;
@@ -20,8 +24,25 @@
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 60px 36px;
 		
+		@include media('<=xlg') {
+			grid-gap: 40px 24px;
+		}
+		
 		@include media('<=lg') {
 			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=md') {
+			grid-gap: 16px;
+		}
+		
+		@include media('<=xs') {
+			padding: 60px 0;
+		}
+		
+		@include media('<=xxs') {
+			grid-template-columns: 1fr;
+			padding: 35px 0;
 		}
 	}
 

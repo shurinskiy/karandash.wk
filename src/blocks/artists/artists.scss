@@ -2,37 +2,66 @@
 
 .artists {
 	$self: &;
-	padding-bottom: 124px;
-
+	
 	&__title.title {
 		background-color: #f6af1b;
 	}
 	
 	&__inner {
-
+		padding-bottom: 124px;
+		
+		@include media('<=md') {
+			padding: 60px 0;
+		}
+		
+		@include media('<=xxs') {
+			padding: 35px 0;
+		}
 	}
 	
 	&__item {
 		display: flex;
 		align-items: center;
 
+		@include media('<=md') {
+			align-items: stretch;
+		}
+
+		@include media('<=xxs') {
+			flex-flow: column nowrap;
+		}
+
 		&:nth-child(even) {
 
-			#{$self}__image {
-				order: 1;
+			@include media('>xxs') {
+				#{$self}__image {
+					order: 1;
+				}
+	
+				#{$self}__side::before {
+					right: auto;
+					left: 100%;
+				}
 			}
 
-			#{$self}__side::before {
-				right: auto;
-				left: 100%;
+			@include media('<=xxs') {
+	
+				#{$self}__side::before {
+					left: auto;
+					right: 0;
+				}
 			}
 		}
 	}
 	
 	&__image {
+		align-self: stretch;
 
 		img {
+			width: 100%;
+			height: 100%;
 			display: block;
+			object-fit: cover;
 		}
 	}
 	
@@ -43,20 +72,53 @@
 		padding: 60px 20px 40px 55px;
 		position: relative;
 		
+		@include media('<=lg') {
+			padding: 40px 30px;
+		}
+		
+		@include media('<=md') {
+			width: 50%;
+		}
+		
+		@include media('<=xs') {
+			padding: 30px 20px;
+		}
+
+		@include media('<=xxs') {
+			width: auto;
+		}
+		
 		&::before {
 			position: absolute;
+			z-index: 1;
 			display: block;
 			content: '';
 			background-color: #f6af1b;
-			height: 100px;
+			aspect-ratio: 0.8;
 			width: 80px;
 			top: 0;
 			right: 100%;
+			
+			@include media('<=md') {
+				width: 50px;
+			}
+			
+			@include media('<=xs') {
+				width: 30px;
+			}
+			
+			@include media('<=xxs') {
+				width: 40px;
+				left: 0;
+				top: auto;
+				right: auto;
+				bottom: 100%;
+			}
 		}
 	}
 
 	&__subtitle {
-		font-size: 50px;
+		font-size: fluid(50px, 28px, md, xxs);
 		font-weight: 700;
 		line-height: 1.0;
 		color: #000;
@@ -64,6 +126,10 @@
 	}
 
 	&__text {
-		font-size: 19px;
+		font-size: fluid(19px, 13px, md, xs);
+		
+		@include media('<=xxs') {
+			font-size: fluid(16px, 14px, xxs, xxxs);
+		}
 	}
 }

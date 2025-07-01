@@ -22,6 +22,18 @@
 
 	&__inner {
 		padding: 115px 0 160px;
+		
+		@include media('<=md') {
+			padding: 100px 0;
+		}
+		
+		@include media('<=xs') {
+			padding: 60px 0;
+		}
+		
+		@include media('<=xxs') {
+			padding: 50px 0 35px;
+		}
 	}
 
 	&__row {
@@ -41,7 +53,7 @@
 		appearance: none;
 		height: auto;
 		margin: 0;
-		padding: 50px 0;
+		padding: fluid(50px, 25px) 0;
 
 		&::after {
 			display: block;
@@ -49,6 +61,10 @@
 			width: 100%;
 			height: 2px;
 			background-color: #058a44;
+
+			@include media('<=xs') {
+				height: 1px;
+			}
 		}
 	}
 }

@@ -4,49 +4,82 @@
 	$self: &;
 
 	&__inner {
-		margin: -16px 0 28px;
+		margin-top: -16px;
+		padding-bottom: 28px;
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-
+		
 		&.container {
 			--container: 1720px;
+		}
+		
+		@include media('<=xxlg') {
+			margin-top: -12px;
+		}
+
+		@include media('<=lg') {
+			margin: 0;
+			padding: 60px 0;
+			flex-flow: column nowrap;
 		}
 	}
 
 	&__date {
 		color: #5796a4;
+		font-size: fluid(148px, 50px, xxxlg, xxxs);
+		line-height: 0.9;
 		
 		span {
 			display: block;
-			font-size: 148px;
 			font-weight: 700;
-			line-height: 0.9;
+
+			@include media('<=lg') {
+				display: inline;
+			}
 		}
 	}
-
+	
 	&__location {
+		font-size: fluid(75px, 45px, xxxlg, lg);
 		position: absolute;
-		top: 60px;
-		left: 275px;
+		top: 15%;
+		right: 48%;
 		color: #f70000;
 		font-weight: 300;
-		font-size: 75px;
 		line-height: 1.0;
 		letter-spacing: -0.02em;
+		
+		@include media('<=xxxlg') {
+			right: 45%;
+		}
+		
+		@include media('<=lg') {
+			font-size: fluid(45px, 32px, sm, xxxs);
+			position: static;
+			padding: 30px 0;
+		}
+		
+		@include media('<=xxs') {
+			padding: 20px 0;
+		}
 	}
-
+	
 	&__motive {
-		font-size: 100px;
+		font-size: fluid(100px, 32px, xxxlg, xxxs);
 		text-transform: uppercase;
 		font-weight: 700;
 		line-height: 1.01;
 		padding-right: 10px;
 		letter-spacing: 0.02em;
+		text-align: right;
+		
+		@include media('<=lg') {
+			text-align: left;
+		}
 
 		span {
 			display: block;
-			text-align: right;
 
 			&:nth-child(1) {
 				color: #f70000;

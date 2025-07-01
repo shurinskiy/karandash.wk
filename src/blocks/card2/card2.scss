@@ -6,9 +6,31 @@
 	flex-flow: column nowrap;
 	align-items: center;
 
+	@include media('<=xxs') {
+		&:nth-child(even) {
+			
+			#{$self}__body::before {
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+
 	&__image {
 		width: 100%;
 		height: 235px;
+		
+		@include media('<=lg') {
+			height: 200px;
+		}
+		
+		@include media('<=sm') {
+			height: 230px;
+		}
+		
+		@include media('<=xs') {
+			height: 200px;
+		}
 
 		img {
 			width: 100%;
@@ -19,37 +41,56 @@
 	}
 
 	&__body {
+		position: relative;
 		background-color: #cbedf3;
 		width: calc(100% - 60px);
-		position: relative;
 		padding: 40px 40px 23px;
 		flex-grow: 1;
+		display: flex;
+		flex-flow: column nowrap;
+		
+		@include media('<=xlg') {
+			padding: fluid(30px, 16px, xlg, md);
+		}
+
+		@include media('<=md') {
+			width: 100%;
+		}
 		
 		&::before {
-			position: absolute;
 			display: block;
-			content: '';
-			background-color: #cbedf3;
-			height: 60px;
-			width: 70px;
+			position: absolute;
 			bottom: 100%;
 			left: 0;
+			content: '';
+			background-color: #cbedf3;
+			width: fluid(70px, 45px, xlg, sm);
+			aspect-ratio: 1.15;
 		}
 	}
 
-	&__title {
-		font-size: 20px;
+	&__subtitle {
+		font-size: fluid(20px, 16px, xlg, md);
 		font-weight: 700;
 		color: #000;
+		
+		@include media('<=xxs') {
+			font-size: fluid(19px, 16px, xxs, xxxs);
+		}
 	}
 	
 	&__text {
-		font-size: 20px;
+		font-size: fluid(20px, 15px, xlg, md);
 		font-weight: 300;
 		margin-bottom: 20px;
+
+		@include media('<=xxs') {
+			font-size: fluid(17px, 15px, xxs, xxxs);
+		}
 	}
 	
 	&__date {
+		margin-top: auto;
 		font-weight: 700;
 		color: #000;
 	}

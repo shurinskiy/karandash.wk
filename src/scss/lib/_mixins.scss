@@ -1,3 +1,4 @@
+@use "variables.scss" as *;
 @use "functions.scss" as *;
 
 // общий сброс элемента
@@ -49,18 +50,6 @@
 
 // показать текущий диапазон
 @mixin screen-media($color: #777) {
-	$breakpoints: (
-		xxxxlg: 1920,
-		xxxlg: 1680,
-		xxlg: 1440,
-		xlg: 1280,
-		lg: 1100,
-		md: 960,
-		sm: 780,
-		xs: 640,
-		xxs: 480,
-		xxxs: 360
-	);
 	& {
 		position: relative;		
 		&::before {
@@ -78,7 +67,7 @@
 			background-color: #ffffd3;
 			border: 1px solid #bbb;
 		}
-		@each $var, $size in $breakpoints {
+		@each $var, $size in $matches {
 			@media screen and (max-width: #{$size}px) {
 				&::before {
 					content: "#{$var}:#{$size}";
