@@ -20,14 +20,6 @@
 		width: 100%;
 		height: 235px;
 		
-		@include media('<=lg') {
-			height: 200px;
-		}
-		
-		@include media('<=sm') {
-			height: 230px;
-		}
-		
 		@include media('<=xs') {
 			height: 200px;
 		}
@@ -70,9 +62,13 @@
 	}
 
 	&__subtitle {
-		font-size: fluid(20px, 16px, xlg, md);
+		font-size: 20px;
 		font-weight: 700;
 		color: #000;
+		
+		@include media('<=md') {
+			font-size: fluid(20px, 17px, md, xs);
+		}
 		
 		@include media('<=xxs') {
 			font-size: fluid(19px, 16px, xxs, xxxs);
@@ -80,9 +76,13 @@
 	}
 	
 	&__text {
-		font-size: fluid(20px, 15px, xlg, md);
+		font-size: 20px;
 		font-weight: 300;
 		margin-bottom: 20px;
+		
+		@include media('<=md') {
+			font-size: fluid(20px, 15px, md, xs);
+		}
 
 		@include media('<=xxs') {
 			font-size: fluid(17px, 15px, xxs, xxxs);
