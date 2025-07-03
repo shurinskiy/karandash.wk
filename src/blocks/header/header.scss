@@ -7,7 +7,7 @@
 	z-index: 12;
 	position: fixed;
 	top: 0;
-	left: max(var(--gap), calc((100% - var(--container) - var(--noscroll-target-scrollbar-width, 0px)) / 2));
+	left: max(var(--gap), calc((calc(var(--vw, 1dvw) * 100) - var(--container)) / 2));
 	
 	&__inner {
 

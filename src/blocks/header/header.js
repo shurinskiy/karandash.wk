@@ -1,4 +1,3 @@
-import { disablePageScroll, enablePageScroll } from '@fluejs/noscroll';
 import { driveMenu } from "../../js/libs/driveMenu";
 
 (() => {
@@ -13,7 +12,6 @@ import { driveMenu } from "../../js/libs/driveMenu";
 		omitToClose: '.modal',
 		class: 'opened',
 		open: function() {
-			disablePageScroll();
 			toggle.classList.add('opened');
 			document.body.classList.add('underlay');
 	
@@ -22,7 +20,6 @@ import { driveMenu } from "../../js/libs/driveMenu";
 			});
 		},
 		close: function() {
-			enablePageScroll();
 			toggle.classList.remove('opened');
 			document.body.classList.add('underlay_closing');
 			
@@ -31,10 +28,6 @@ import { driveMenu } from "../../js/libs/driveMenu";
 			}, { once: true });
 		}
 	});
-	
-	// window.addEventListener('scroll', () => {
-	// 	header.classList[window.scrollY < 30 ? 'remove': 'add']('header_scrolled');
-	// });
 
 	navi.addEventListener('swiped-left', (e) => menu.menuClose(e));
 

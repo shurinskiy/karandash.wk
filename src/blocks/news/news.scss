@@ -2,7 +2,29 @@
 
 .news {
 	$self: &;
+	position: relative;
 	
+	&__decor {
+				
+		&_1 {
+			width: 160px;
+			right: -90px;
+			top: 100px;
+		}
+
+		&_2 {
+			width: 365px;
+			left: -190px;
+			bottom: 130px;
+		}
+
+		&_3 {
+			width: 320px;
+			right: -70px;
+			bottom: 135px;
+		}
+	}
+
 	&__title.title {
 		background-color: #0e396c;
 	}

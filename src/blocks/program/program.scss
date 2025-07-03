@@ -2,7 +2,44 @@
 
 .program {
 	$self: &;
+	position: relative;
 	background-color: #cbedf3;
+
+	&__decor {
+		
+		&_1 {
+			width: 370px;
+			left: -110px;
+			top: 385px;
+		}
+
+		&_2 {
+			width: 360px;
+			right: -30px;
+			top: 505px;
+		}
+
+		&_3 {
+			width: 255px;
+			left: 55px;
+			bottom: -25px;
+		}
+	}
+
+	&__wave {
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		width: 100%;
+
+		&_top {
+			bottom: 100%;			
+		}
+		
+		&_bottom {
+			bottom: 0;
+		}
+	}
 	
 	&__title.title {
 		background-color: #5796a4;

@@ -45,14 +45,14 @@
 body, html {
 	// scrollbar-gutter: stable;
 	scroll-behavior: smooth;	
-	box-sizing: border-box;
 	background-color: #fff;
 	font-size: var(--size);
 	color: var(--text);
 	font-family: "GL", sans-serif;
 	line-height: 1.2;
 	font-weight: 400;
-	min-height: 100vh;
+	min-height: calc(var(--vh, 1vh) * 100);
+	max-width: calc(var(--vw, 1dvw) * 100);
 	display: flex;
 	flex-flow: column nowrap;
 	
@@ -64,8 +64,11 @@ body, html {
 body {
 	overflow-x: hidden;
 	position: relative;
+	padding-right: 0 !important;
 	
 	&.underlay {
+		overflow-y: hidden;
+		
 		&::before {
 			display: block;
 			box-sizing: border-box;

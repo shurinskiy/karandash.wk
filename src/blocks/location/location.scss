@@ -4,6 +4,28 @@
 	$self: &;
 	--ht: 775px;
 	--vc: 1;
+	position: relative;
+
+	&__decor {
+		
+		&_1 {
+			width: 290px;
+			left: -110px;
+			top: 295px;
+		}
+
+		&_2 {
+			width: 175px;
+			left: 40px;
+			top: 480px;
+		}
+
+		&_3 {
+			width: 150px;
+			right: 90px;
+			bottom: -20px;
+		}
+	}
 	
 	&__title.title {
 		position: relative;

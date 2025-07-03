@@ -5,6 +5,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding-top: 75px;
+
+	@include media('<=xxs') {
+		padding-top: 35px;
+	}
 
 	&__link {
 		display: flex;
@@ -14,7 +19,7 @@
 		color: #0e396c;
 		font-size: 20px;
 		height: 40px;
-		width: 40px;
+		width: 47px;
 		
 		&.current {
 			font-weight: 700;
@@ -26,7 +31,7 @@
 	}
 	
 	&__nav {
-		width: 70px;
+		width: 65px;
 		height: 40px;
 		display: flex;
 		align-items: center;

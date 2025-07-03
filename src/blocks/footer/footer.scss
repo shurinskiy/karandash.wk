@@ -5,7 +5,17 @@
 	padding: 170px 0 115px;
 	background: url('./images/footer-waves.svg') center top / auto repeat-x #0e396c;
 	background-size: fluid(270px, 100px);
+	position: relative;
 	color: #fff;
+
+	&__decor {
+
+		&_1 {
+			width: 125px;
+			right: 75px;
+			bottom: calc(100% - 5px);
+		}
+	}
 	
 	@include media('<=xs') {
 		padding: 130px 0 50px;

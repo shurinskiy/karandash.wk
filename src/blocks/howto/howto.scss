@@ -5,6 +5,28 @@
 	background: url('./images/howto-waves.svg') center bottom -20px / auto repeat-x #fad2db;
 	background-position: center bottom fluid(-20px, -5px);
 	background-size: fluid(270px, 100px);
+	position: relative;
+
+	&__decor {
+		
+		&_1 {
+			width: 290px;
+			left: -65px;
+			top: 304px;
+		}
+
+		&_2 {
+			width: 95px;
+			left: 75px;
+			bottom: 0px;
+		}
+
+		&_3 {
+			width: 550px;
+			right: -90px;
+			bottom: 130px;
+		}
+	}
 
 	&__title.title {
 		background-color: #ef5899;
@@ -58,6 +80,7 @@
 		}
 		
 		&.container {
+			--container: 860px;
 
 			@include media('<=xxs') {
 				--container: 300px;

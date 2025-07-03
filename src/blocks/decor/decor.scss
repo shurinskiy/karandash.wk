@@ -1,0 +1,7 @@
+@use 'lib' as *;
+
+.decor {
+	$self: &;
+	position: absolute;
+	z-index: 10;
+}

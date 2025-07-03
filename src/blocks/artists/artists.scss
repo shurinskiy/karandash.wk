@@ -2,6 +2,94 @@
 
 .artists {
 	$self: &;
+	position: relative;
+
+	&__decor {
+
+		&_1 {
+			width: 320px;
+			right: -105px;
+			top: 110px;
+		}
+
+		&_2 {
+			width: 350px;
+			left: -35px;
+			top: 500px;
+		}
+
+		&_3 {
+			width: 340px;
+			right: 140px;
+			top: 765px;
+		}
+
+		&_4 {
+			width: 220px;
+			left: -70px;
+			top: 1440px;
+		}
+
+		&_5 {
+			width: 360px;
+			right: -170px;
+			top: calc(50% - 830px);
+		}
+
+		&_6 {
+			width: 215px;
+			left: 40px;
+			top: calc(50% - 320px);
+		}
+
+		&_7 {
+			width: 195px;
+			right: 240px;
+			top: calc(50% - 320px);
+		}
+
+		&_8 {
+			width: 270px;
+			left: 165px;
+			top: calc(50% + 20px);
+		}
+
+		&_9 {
+			width: 270px;
+			right: -30px;
+			top: calc(50% + 680px);
+		}
+
+		&_10 {
+			width: 415px;
+			left: -150px;
+			bottom: 840px;
+		}
+
+		&_11 {
+			width: 170px;
+			left: 135px;
+			bottom: 805px;
+		}
+
+		&_12 {
+			width: 150px;
+			right: 50px;
+			bottom: 690px;
+		}
+
+		&_13 {
+			width: 265px;
+			left: -35px;
+			bottom: 275px;
+		}
+
+		&_14 {
+			width: 190px;
+			right: 120px;
+			bottom: 320px;
+		}
+	}
 	
 	&__title.title {
 		background-color: #f6af1b;
@@ -9,6 +97,8 @@
 	
 	&__inner {
 		padding-bottom: 124px;
+		position: relative;
+		z-index: 2;
 		
 		@include media('<=md') {
 			padding: 60px 0;

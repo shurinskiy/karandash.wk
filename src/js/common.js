@@ -6,13 +6,24 @@ import "./blocks.js";
 
 /* Тут можно писать код общий для всего проекта и требующий единого пространства имен */
 
+// Единица высоты
 function updateVH() {
-	const vh = (window.visualViewport?.height || window.innerHeight) * 0.01;
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	const { height = window.innerHeight } = window.visualViewport || {};
+	document.documentElement.style.setProperty('--vh', `${height * 0.01}px`);
 }
 
-window.addEventListener('resize', throttle(updateVH, 200), { passive: true });
+['resize', 'orientationchange'].forEach(event => {
+	window.addEventListener(event, throttle(updateVH, 100), { passive: true });
+});
+
 updateVH();
+
+// Единица ширины
+new ResizeObserver(() => {
+	const { width = window.innerWidth } = window.visualViewport || {};
+	document.documentElement.style.setProperty('--vw', `${width * 0.01}px`);
+}).observe(document.documentElement);
+
 
 // Динамический адаптив
 new driveAdaptive({
