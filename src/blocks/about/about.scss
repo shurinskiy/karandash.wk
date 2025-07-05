@@ -38,22 +38,39 @@
 			font-size: fluid(20px, 15px, xlg, md);
 			width: 415px;
 			
-			@include media('<=sm','>xxs') {
-				&:nth-child(1) {
+			@include media('<=sm') {
+				font-size: fluid(20px, 16px, sm, xxs);
+			}
+			
+			&:nth-child(1) {
+				@include media('<=sm','>xxs') {
 					margin-right: auto;
 				}
-				
-				&:nth-child(2) {
-					margin-left: auto;
-				}
-				
-				&:nth-child(3) {
-					margin-right: auto;
+
+				img {
+					translate: -5px -15px;
 				}
 			}
 			
-			@include media('<=sm') {
-				font-size: fluid(20px, 16px, sm, xxs);
+			&:nth-child(2) {
+				@include media('<=sm','>xxs') {
+					margin-left: auto;
+				}
+
+				img {
+					translate: -5px -10px;
+				}
+			}
+			
+			&:nth-child(3) {
+				@include media('<=sm','>xxs') {
+					margin-right: auto;
+				}
+
+				img {
+					translate: 4px 0px;
+					scale: 0.85;
+				}
 			}
 		}
 	}

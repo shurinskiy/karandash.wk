@@ -2,8 +2,8 @@
 
 .post {
 	$self: &;
-	background: url('./images/post-top-waves.svg') top center / auto repeat-x transparent;
-	background-size: fluid(270px, 100px, xxxxlg, xxs);
+	background: url('./images/post-top-waves.svg') top center / 14.5% auto repeat-x transparent;
+	// background-size: fluid(270px, 100px, xxxxlg, xxs);
 	position: relative;
 	padding: 205px 0 60px;
 
