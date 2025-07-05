@@ -2,28 +2,28 @@
 
 .howto {
 	$self: &;
-	background: url('./images/howto-waves.svg') center bottom -20px / auto repeat-x #fad2db;
+	background: url('./images/waves-up.svg') center bottom -20px / auto repeat-x #fad2db;
 	background-position: center bottom fluid(-20px, -5px);
-	background-size: fluid(270px, 100px);
+	background-size: fluid(270px, 100px, xxxxlg, xxs);
 	position: relative;
 
 	&__decor {
 		
 		&_1 {
 			width: 290px;
-			left: -65px;
+			right: calc(50% + 730px);
 			top: 304px;
 		}
-
+		
 		&_2 {
 			width: 95px;
-			left: 75px;
+			right: calc(50% + 780px);
 			bottom: 0px;
 		}
-
+		
 		&_3 {
 			width: 550px;
-			right: -90px;
+			left: calc(50% + 490px);
 			bottom: 130px;
 		}
 	}

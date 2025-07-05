@@ -10,19 +10,19 @@
 		
 		&_1 {
 			width: 290px;
-			left: -110px;
+			right: calc(50% + 775px);
 			top: 295px;
 		}
 
 		&_2 {
 			width: 175px;
-			left: 40px;
+			right: calc(50% + 735px);
 			top: 480px;
 		}
 
 		&_3 {
 			width: 150px;
-			right: 90px;
+			left: calc(50% + 710px);
 			bottom: -20px;
 		}
 	}

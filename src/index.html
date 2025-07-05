@@ -7,6 +7,14 @@
 	<img class="hero__decor hero__decor_3 decor" src="./images/decor-28.svg" alt="">
 	<img class="hero__decor hero__decor_4 decor" src="./images/decor-3.svg" alt="">
 	<img class="hero__decor hero__decor_5 decor" src="./images/decor-4.svg" alt="">
+	<div class="hero__slider swiper">
+		<div class="swiper-wrapper">
+			<div class="hero__slide swiper-slide"><img src="./images/hero-image-1.webp" alt=""></div>
+			<div class="hero__slide swiper-slide"><img src="./images/hero-image-2.webp" alt=""></div>
+			<div class="hero__slide swiper-slide"><img src="./images/hero-image-3.webp" alt=""></div>
+			<div class="hero__slide swiper-slide"><img src="./images/hero-image-4.webp" alt=""></div>
+		</div>
+	</div>
 	<div class="hero__inner container">
 		<div class="hero__motive">
 			<span>Смех</span>
@@ -379,36 +387,48 @@
 	<img class="news__decor news__decor_2 decor" src="./images/decor-29.svg" alt="">
 	<img class="news__decor news__decor_3 decor" src="./images/decor-30.svg" alt="">
 	<h2 class="news__title title"><strong>Новости</strong></h2>
-	<div class="news__items container">
-		<div class="news__item">
-			<div class="news__image">
-				<img src="./images/stuff/new-image-1.webp" alt="">
-			</div>
-			<div class="news__body">
-				<h3 class="news__subtitle">В Старице пройдет цирковой фестиваль.</h3>
-				<div class="news__text">Лучшие современные артисты примут участие в грандиозном событии этого лета...</div>
-				<div class="news__date">22.06.2025</div>
+	<div class="news__inner container">
+		<div class="news__items swiper">
+			<div class="swiper-wrapper">
+				<div class="news__item swiper-slide">
+					<a class="news__image" href="./post.html">
+						<img src="./images/stuff/card-image-1.webp" alt="">
+					</a>
+					<div class="news__body">
+						<h3 class="news__subtitle">В Старице пройдет цирковой фестиваль.</h3>
+						<div class="news__text">Лучшие современные артисты примут участие в грандиозном событии этого лета...</div>
+						<div class="news__date">22.06.2025</div>
+					</div>
+				</div>
+				<div class="news__item swiper-slide">
+					<a class="news__image" href="./post.html">
+						<img src="./images/stuff/card-image-2.webp" alt="">
+					</a>
+					<div class="news__body">
+						<h3 class="news__subtitle">ТАСС сообщил о сценариях обновления Старицы.</h3>
+						<div class="news__text">Молодые архитекторы Школы дизайна НИУ ВШЭ исследовали городскую среду Старицы при поддержке...</div>
+						<div class="news__date">22.06.2025</div>
+					</div>
+				</div>
+				<div class="news__item swiper-slide">
+					<a class="news__image" href="./post.html">
+						<img src="./images/stuff/card-image-3.webp" alt="">
+					</a>
+					<div class="news__body">
+						<h3 class="news__subtitle">«Ведомости» написали о новой Старице.</h3>
+						<div class="news__text">9 сентября 2024 года в газете «Ведомости» вышла большая статья о новой жизни Старицы и ее ключевом меценате...</div>
+						<div class="news__date">22.06.2025</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="news__item">
-			<div class="news__image">
-				<img src="./images/stuff/new-image-2.webp" alt="">
-			</div>
-			<div class="news__body">
-				<h3 class="news__subtitle">ТАСС сообщил о сценариях обновления Старицы.</h3>
-				<div class="news__text">Молодые архитекторы Школы дизайна НИУ ВШЭ исследовали городскую среду Старицы при поддержке...</div>
-				<div class="news__date">22.06.2025</div>
-			</div>
-		</div>
-		<div class="news__item">
-			<div class="news__image">
-				<img src="./images/stuff/new-image-3.webp" alt="">
-			</div>
-			<div class="news__body">
-				<h3 class="news__subtitle">«Ведомости» написали о новой Старице.</h3>
-				<div class="news__text">9 сентября 2024 года в газете «Ведомости» вышла большая статья о новой жизни Старицы и ее ключевом меценате...</div>
-				<div class="news__date">22.06.2025</div>
-			</div>
+		<div class="news__controls">
+			<button class="news__control news__control_prev">
+				<svg><use xlink:href="#prev"></use></svg>
+			</button>
+			<button class="news__control news__control_next">
+				<svg><use xlink:href="#next"></use></svg>
+			</button>
 		</div>
 	</div>
 </section>

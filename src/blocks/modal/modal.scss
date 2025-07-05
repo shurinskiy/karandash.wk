@@ -1,0 +1,134 @@
+@use 'lib' as *;
+
+.modal {
+	$self: &;
+	box-sizing: border-box;
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	height: 100dvh;
+	background-color: rgba(0, 0, 0, 0.9);
+	backdrop-filter: blur(3px);
+	padding: var(--gap);
+	overflow-y: auto;
+	@keyframes slideInDown {
+		from { opacity: 0; transform: translateY(-1000px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+
+	&[style*="display: block"] {
+		display: flex !important;
+	}
+
+	&__hidden {
+		display: none;
+	}
+	
+	&__close {
+		display: none;
+		position: absolute;
+		top: 10px; right: 10px;
+		cursor: pointer;
+		width: 40px;
+		height: 40px;
+		z-index: 3;
+		border-radius: 100px;
+		background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" preserveAspectRatio="none"><defs><style>.line{fill:#fff;fill-rule:evenodd;}</style></defs><rect class="line" x="10.5" y="9" width="26" height="2" transform="rotate(45 10.5 9)"/><rect class="line" x="28.8" y="10.5" width="26" height="2" transform="rotate(135 28.8 10.5)"/></svg>') center / 34px 34px no-repeat rgba(255, 255, 255, 0.04);
+		transition: background-color 0.3s;
+		
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	}
+
+	&__body {
+		animation: slideInDown 0.5s ease both;
+		box-sizing: border-box;
+		margin: auto;
+		max-width: 1080px;
+		box-shadow: 0px 1px 10px 4px rgba(0, 0, 0, 0.07);
+		width: calc(100% - 100px);
+		
+		@include media('<=sm') {
+			width: calc(100% - 70px);
+		}
+		
+		@include media('<=xxs') {
+			width: 100%;
+		}
+	}
+	
+	&__content {
+		min-height: 200px;
+		overflow: hidden;
+		
+		@include media('<=xxs') {
+			margin: auto calc(var(--gap) * -1);
+		}
+
+		&_gallery {
+
+			img, video {
+				animation: fadeIn 0.3s;
+				display: none;
+	
+				&.active {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&__button {
+		@extend %reset-button;
+		height: 47px;
+		width: 47px;
+		transition: filter 0.3s;
+		background-repeat: no-repeat;
+		background-position: center;
+		
+		position: absolute;
+		top: calc(50% - 23px);
+		z-index: 2;
+		
+		@include media('<=sm') {
+			top: calc(50% - 19px);
+			height: 38px;
+			width: 38px;
+		}
+		
+		&:hover {
+			filter: brightness(2);
+		}
+
+		&_prev {
+			left: -70px;
+			background: svg-url('<svg width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M-1.06179e-06 13.5L24 27L24 -2.06186e-07L-1.06179e-06 13.5Z" fill="#9fdee8"/></svg>') center / auto 60% no-repeat transparent;
+			
+			@include media('<=sm') {
+				left: -50px;
+			}
+			
+			@include media('<=xxs') {
+				left: -10px;
+			}
+		}
+		
+		&_next {
+			right: -70px;
+			background: svg-url('<svg width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 13.5L0 0L0 27L24 13.5Z" fill="#9fdee8"/></svg>') center / auto 60% no-repeat transparent;
+			
+			@include media('<=sm') {
+				right: -50px;
+			}
+			
+			@include media('<=xxs') {
+				right: -10px;
+			}
+		}
+	}
+}

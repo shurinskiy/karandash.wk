@@ -8,22 +8,22 @@ import "./blocks.js";
 
 // Единица высоты
 function updateVH() {
-	const { height = window.innerHeight } = window.visualViewport || {};
+	const { height = window.innerHeight, width = window.innerWidth } = window.visualViewport || {};
 	document.documentElement.style.setProperty('--vh', `${height * 0.01}px`);
+	document.documentElement.style.setProperty('--vw', `${width * 0.01}px`);
 }
 
 ['resize', 'orientationchange'].forEach(event => {
-	window.addEventListener(event, throttle(updateVH, 100), { passive: true });
+	window.addEventListener(event, throttle(updateVH, 50), { passive: true });
 });
 
 updateVH();
 
 // Единица ширины
-new ResizeObserver(() => {
+/* new ResizeObserver(() => {
 	const { width = window.innerWidth } = window.visualViewport || {};
 	document.documentElement.style.setProperty('--vw', `${width * 0.01}px`);
-}).observe(document.documentElement);
-
+}).observe(document.documentElement); */
 
 // Динамический адаптив
 new driveAdaptive({

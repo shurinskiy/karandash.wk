@@ -9,19 +9,19 @@
 		
 		&_1 {
 			width: 370px;
-			left: -110px;
+			right: calc(50% + 690px);
 			top: 385px;
 		}
 
 		&_2 {
 			width: 360px;
-			right: -30px;
+			left: calc(50% + 620px);
 			top: 505px;
 		}
-
+		
 		&_3 {
 			width: 255px;
-			left: 55px;
+			right: calc(50% + 645px);
 			bottom: -25px;
 		}
 	}

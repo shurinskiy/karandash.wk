@@ -4,96 +4,96 @@
 	$self: &;
 	padding: 110px 0;
 	position: relative;
+	
+	@include media('<=xxs') {
+		padding: 100px 0 30px;
+	}
 
 	&__decor {
 
 		&_1 {
 			width: 185px;
-			left: -95px;
+			right: calc(50% + 860px);
 			top: 340px;
 		}
-
+		
 		&_2 {
 			width: 130px;
-			left: 0px;
+			right: calc(50% + 820px);
 			top: 435px;
 		}
-
+		
 		&_3 {
 			width: 350px;
-			right: -90px;
+			left: calc(50% + 690px);
 			top: 430px;
 		}
-
+		
 		&_4 {
 			width: 220px;
-			right: -40px;
+			left: calc(50% + 770px);
 			top: 520px;
 		}
-
+		
 		&_5 {
 			width: 140px;
-			left: 70px;
+			right: calc(50% + 740px);
 			top: 760px;
 		}
-
+		
 		&_6 {
 			width: 205px;
-			right: -50px;
+			left: calc(50% + 790px);
 			top: calc(50% - 115px);
 		}
-
+		
 		&_7 {
 			width: 290px;
-			left: -140px;
+			right: calc(50% + 800px);
 			top: calc(50% - 35px);
 		}
-
+		
 		&_8 {
 			width: 80px;
-			left: 100px;
+			right: calc(50% + 770px);
 			top: calc(50% + 110px);
 		}
-
+		
 		&_9 {
 			width: 120px;
-			right: 65px;
+			left: calc(50% + 770px);
 			top: calc(50% + 225px);
 		}
-
+		
 		&_10 {
 			width: 275px;
-			right: -210px;
+			left: calc(50% + 890px);
 			bottom: 420px;
 		}
-
+		
 		&_11 {
 			width: 140px;
-			right: 60px;
+			left: calc(50% + 750px);
 			bottom: 495px;
 		}
-
+		
 		&_12 {
 			width: 325px;
-			right: -160px;
+			left: calc(50% + 780px);
 			bottom: 205px;
 		}
-
+		
 		&_13 {
 			width: 175px;
 			bottom: 295px;
-			left: 45px;
+			right: calc(50% + 730px);
 		}
-
+		
 		&_14 {
 			width: 320px;
 			bottom: 55px;
-			left: -100px;
+			right: calc(50% + 730px);
 		}
-	}
-	
-	@include media('<=xxs') {
-		padding: 100px 0 30px;
 	}
 
 	&__title.title {
@@ -103,7 +103,12 @@
 	&__inner {
 		&.container {
 			--container: 1260px;
+
+			@include media('<=xxs') {
+				width: 100%;
+			}
 		}
+	
 	}
 
 	&__items {

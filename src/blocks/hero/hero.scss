@@ -2,7 +2,7 @@
 
 .hero {
 	$self: &;
-	background: url('./images/hero-bg.webp') top center / cover no-repeat transparent;
+	background: url('./images/hero-image-1.webp') top center / cover no-repeat transparent;
 	height: calc(var(--vh, 1dvh) * 100);
 	position: relative;
 	height: 1039px;
@@ -22,15 +22,15 @@
 		&_2 {
 			width: 315px;
 			bottom: 160px;
-			right: 15px;
+			left: calc(50% + 620px);
 		}
-
+		
 		&_3 {
 			width: 190px;
 			left: calc(50% - 425px);
 			top: -45px;
 		}
-
+		
 		&_4 {
 			width: 130px;
 			left: 110px;
@@ -39,7 +39,7 @@
 
 		&_5 {
 			width: 405px;
-			right: -230px;
+			left: calc(50% + 775px);
 			bottom: -60px;
 		}
 	}
@@ -61,7 +61,25 @@
 		}
 	}
 
+	&__slider.swiper {
+		max-width: 100%;
+		position: absolute;
+		overflow: hidden;
+		inset: 0;
+	}
+	
+	&__slide.swiper-slide {
+		
+		img {
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+		}
+	}
+
 	&__head {
+		z-index: 5;
 		clip-path: polygon(3% 12%, 41% 0, 88% 5%, 100% 28%, 98% 90%, 67% 100%, 5% 95%, 0 64%);
 		background-color: #5595a4;
 		max-width: 100%;
@@ -101,6 +119,7 @@
 
 	&__motive {
 		position: absolute;
+		z-index: 5;
 		bottom: 0;
 		left: 0;
 
