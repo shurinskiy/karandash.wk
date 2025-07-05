@@ -14,6 +14,7 @@ import { driveMenu } from "../../js/libs/driveMenu";
 		open: function() {
 			toggle.classList.add('opened');
 			document.body.classList.add('underlay');
+			document.documentElement.style.setProperty('overflow', 'hidden');
 	
 			this.querySelectorAll('a.header__link[href*="#"]').forEach(link => {
 				link.addEventListener('click', (e) => menu.menuClose(e));
@@ -24,6 +25,7 @@ import { driveMenu } from "../../js/libs/driveMenu";
 			document.body.classList.add('underlay_closing');
 			
 			this.addEventListener('transitionend', e => {
+				document.documentElement.style.removeProperty('overflow');
 				document.body.classList.remove('underlay', 'underlay_closing');
 			}, { once: true });
 		}

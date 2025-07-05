@@ -29,6 +29,11 @@
 		color: #5796a4;
 		font-size: fluid(148px, 48px, xxxlg, xxxs);
 		line-height: 0.9;
+		padding-top: 4px;
+
+		@include media('<=lg') {
+			padding: 0;
+		}
 		
 		span {
 			display: block;

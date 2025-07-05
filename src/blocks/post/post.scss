@@ -7,7 +7,15 @@
 	position: relative;
 	padding: 205px 0 60px;
 
+	@include media('<=xxs') {
+		background-size: 70px auto;
+	}
+
 	&__decor {
+
+		@include media('<=lg') {
+			display: none;
+		}
 
 		&_1 {
 			width: 185px;

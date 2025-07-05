@@ -6,6 +6,10 @@
 	background-color: #cbedf3;
 
 	&__decor {
+
+		@include media('<=lg') {
+			display: none;
+		}
 		
 		&_1 {
 			width: 370px;

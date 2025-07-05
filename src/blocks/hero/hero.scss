@@ -5,7 +5,7 @@
 	background: url('./images/hero-image-1.webp') top center / cover no-repeat transparent;
 	height: calc(var(--vh, 1dvh) * 100);
 	position: relative;
-	height: 1039px;
+	// height: 1039px;
 
 	@include media('<=xs') {
 		background-position: top left calc(50% - 200px);

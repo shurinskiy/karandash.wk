@@ -18,8 +18,16 @@
 		background-position: center bottom -5px;
 	}
 
+	@include media('<=xxs') {
+		background-size: 70px auto;
+	}
+
 	&__decor {
 		
+		@include media('<=lg') {
+			display: none;
+		}
+
 		&_1 {
 			width: 290px;
 			right: calc(50% + 730px);
@@ -34,8 +42,8 @@
 		
 		&_3 {
 			width: 550px;
-			left: calc(50% + 490px);
-			bottom: 130px;
+			left: calc(50% + 500px);
+			bottom: 120px;
 		}
 	}
 

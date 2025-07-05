@@ -6,6 +6,10 @@
 
 	&__decor {
 
+		@include media('<=lg') {
+			display: none;
+		}
+
 		&_1 {
 			width: 320px;
 			left: calc(50% + 740px);

@@ -11,6 +11,10 @@
 
 	&__decor {
 
+		@include media('<=lg') {
+			display: none;
+		}
+
 		&_1 {
 			width: 185px;
 			right: calc(50% + 860px);
