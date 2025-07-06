@@ -5,14 +5,54 @@
 	background: url('./images/waves-up.svg') center bottom / 14.5% auto repeat-x #cbedf3;
 	padding-bottom: 160px;
 
-	&__title {
+	@include media('<=md') {
+		padding-bottom: 120px;
+	}
+
+	@include media('<=sm') {
+		padding-bottom: 80px;
+	}
+
+	@include media('<=xs') {
+		padding-bottom: 60px;
+	}
+
+	@include media('<=xxs') {
+		background-size: 70px auto;
+	}
+
+	&__title.title {
 		background-color: #cbedf3;
 		margin-bottom: -38px;
+		
+		@include media('<=xxlg') {
+			margin-bottom: -28px;
+		}
+		
+		@include media('<=xlg') {
+			margin-bottom: -18px;
+		}
+		
+		@include media('<=lg') {
+			margin-bottom: -8px;
+		}
+		
+		@include media('<=md') {
+			margin-bottom: 0;
+		}
 	}
 
 	&__inner {
 		padding: 0 90px;
 		position: relative;
+		
+		@include media('<=xlg') {
+			padding: 0 50px;
+		}
+		
+		@include media('<=lg') {
+			padding: 0;
+		}
 
 		&.container {
 			--container: 1440px;
@@ -20,7 +60,13 @@
 	}
 
 	&__slider.swiper {
-
+		@include media('<=xs') {
+			padding-top: 0;
+			margin-left: calc(var(--gap) * -1);
+			margin-right: calc(var(--gap) * -1);
+			padding-left: var(--gap);
+			padding-right: var(--gap);
+		}
 	}
 
 	&__slide.swiper-slide {
@@ -39,19 +85,33 @@
 		display: flex;
 		align-items: center;
 		height: 50px;
-		width: 70px;
+		width: 50px;
 		position: absolute;
 		top: calc(50% - 25px);
 		z-index: 1;
 
+		@include media('<=xxs') {
+			display: none;
+		}
+
 		&_prev {
 			justify-content: flex-start;
 			left: 0;
+
+			@include media('<=lg') {
+				justify-content: center;
+				left: calc(var(--gap) * -1);
+			}
 		}
 
 		&_next {
 			justify-content: flex-end;
 			right: 0;
+
+			@include media('<=lg') {
+				justify-content: center;
+				right: calc(var(--gap) * -1);
+			}
 		}
 
 		&:disabled svg {
