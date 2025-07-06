@@ -1,10 +1,14 @@
 import { throttle } from "./libs/utils";
 import { driveAdaptive } from "./libs/driveAdaptive.js";
+import { scrollBasedToggle } from "./libs/scrollBasedToggle";
 import "../../node_modules/swiped-events/dist/swiped-events.min.js";
 import "./polyfills.js";
 import "./blocks.js";
 
 /* Тут можно писать код общий для всего проекта и требующий единого пространства имен */
+
+// Запуск анимаций
+let scrollToggle = scrollBasedToggle({ class: 'run' });
 
 // Ширина скроллбара
 document.documentElement.style.setProperty('--sw', `${window.innerWidth - document.documentElement.clientWidth}px`);

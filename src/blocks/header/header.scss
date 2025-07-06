@@ -17,6 +17,7 @@
 		@extend %reset-button;
 		display: flex;
 		flex-flow: column nowrap;
+		opacity: 0;
 		gap: 9px;
 		
 		@include media('<=xlg') {
@@ -29,6 +30,11 @@
 		
 		@include media('<=sm') {
 			gap: 6px;
+		}
+		
+		&.run {
+			animation: slideDown 0.5s forwards;
+			animation-delay: 0.5s;
 		}
 
 		&::before {
