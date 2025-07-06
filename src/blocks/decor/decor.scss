@@ -3,5 +3,6 @@
 .decor {
 	$self: &;
 	position: absolute;
+	will-change: transform;
 	z-index: 4;
 }

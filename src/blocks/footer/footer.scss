@@ -12,16 +12,15 @@
 		background-size: 70px auto;
 	}
 
-	&__decor {
+	&__dancer {
+		position: absolute;
+		z-index: 4;
+		right: fluid(75px, 5px, xxxxlg, xs);
+		width: fluid(125px, 80px, xxxxlg, xs);
+		bottom: calc(100% - 5px);
 
 		@include media('<=xs') {
 			display: none;
-		}
-
-		&_1 {
-			right: fluid(75px, 5px, xxxxlg, xs);
-			width: fluid(125px, 80px, xxxxlg, xs);
-			bottom: calc(100% - 5px);
 		}
 	}
 	
