@@ -83,6 +83,7 @@
 		z-index: 5;
 		clip-path: polygon(3% 12%, 41% 0, 88% 5%, 100% 28%, 98% 90%, 67% 100%, 5% 95%, 0 64%);
 		background-color: #5595a4;
+		pointer-events: none;
 		max-width: 100%;
 		width: 720px;
 
@@ -119,6 +120,7 @@
 	}
 
 	&__motive {
+		pointer-events: none;
 		position: absolute;
 		z-index: 5;
 		bottom: 0;

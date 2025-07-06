@@ -6,14 +6,14 @@ import { Autoplay } from 'swiper/modules';
 	new Swiper(".hero__slider", {
 		modules: [ Autoplay ],
 		loop: true,
-		speed: 1000,
+		speed: 500,
 		spaceBetween: 0,
-		noSwiping: true,
-		simulateTouch: false, 
-		allowTouchMove: false,
-		preventInteractionOnTransition: true,
+		// noSwiping: true,
+		// simulateTouch: false, 
+		// allowTouchMove: false,
+		// preventInteractionOnTransition: true,
 		autoplay: { 
-			delay: 10000,
+			delay: 5000,
 			disableOnInteraction: false
 		}
 	});
