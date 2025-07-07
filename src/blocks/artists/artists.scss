@@ -11,38 +11,38 @@
 		}
 
 		&_1 {
-			width: 320px;
-			left: calc(50% + 740px);
+			width: fluid(320px, 240px, xxxlg, xxlg);
+			left: calc(50% + fluid(740px, 550px, xxxlg, xxlg));
 			top: 110px;
 		}
 		
 		&_2 {
-			width: 350px;
-			right: calc(50% + 650px);
+			width: fluid(350px, 240px, xxxlg, xxlg);
+			right: calc(50% + fluid(650px, 520px, xxxlg, xxlg));
 			top: 500px;
 		}
 		
 		&_3 {
-			width: 340px;
+			width: fluid(340px, 300px, xxxlg, xxlg);
 			left: calc(50% + 470px);
 			top: 765px;
 		}
 		
 		&_4 {
 			width: 220px;
-			right: calc(50% + 800px);
+			right: calc(50% + fluid(800px, 560px, xxxlg, xxlg));
 			top: 1440px;
 		}
 		
 		&_5 {
-			width: 360px;
-			left: calc(50% + 760px);
+			width: fluid(360px, 280px, xxxlg, xxlg);
+			left: calc(50% + fluid(760px, 540px, xxxlg, xxlg));
 			top: calc(50% - 830px);
 		}
 		
 		&_6 {
 			width: 215px;
-			right: calc(50% + 700px);
+			right: calc(50% + fluid(700px, 580px, xxxlg, xxlg));
 			top: calc(50% - 320px);
 		}
 		
@@ -53,44 +53,44 @@
 		}
 		
 		&_8 {
-			width: 270px;
+			width: fluid(270px, 220px, xxxlg, xxlg);
 			right: calc(50% + 515px);
 			top: calc(50% + 20px);
 		}
 		
 		&_9 {
-			width: 270px;
-			left: calc(50% + 710px);
+			width: fluid(270px, 220px, xxxlg, xxlg);
+			left: calc(50% + fluid(710px, 540px, xxxlg, xxlg));
 			top: calc(50% + 680px);
 		}
 		
 		&_10 {
-			width: 415px;
-			right: calc(50% + 690px);
+			width: fluid(415px, 320px, xxxlg, xxlg);
+			right: calc(50% + fluid(690px, 560px, xxxlg, xxlg));
 			bottom: 840px;
 		}
 		
 		&_11 {
-			width: 170px;
-			right: calc(50% + 650px);
+			width: fluid(170px, 130px, xxxlg, xxlg);
+			right: calc(50% + fluid(650px, 540px, xxxlg, xxlg));
 			bottom: 805px;
 		}
 		
 		&_12 {
-			width: 150px;
-			left: calc(50% + 750px);
+			width: fluid(150px, 130px, xxxlg, xxlg);
+			left: calc(50% + fluid(750px, 560px, xxxlg, xxlg));
 			bottom: 690px;
 		}
 		
 		&_13 {
-			width: 265px;
 			bottom: 275px;
-			right: calc(50% + 720px);
+			width: fluid(265px, 200px, xxxlg, xxlg);
+			right: calc(50% + fluid(720px, 560px, xxxlg, xxlg));
 		}
 		
 		&_14 {
-			width: 190px;
-			left: calc(50% + 645px);
+			width: fluid(190px, 150px, xxxlg, xxlg);
+			left: calc(50% + fluid(645px, 540px, xxxlg, xxlg));
 			bottom: 320px;
 		}
 	}

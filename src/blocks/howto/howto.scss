@@ -29,20 +29,20 @@
 		}
 
 		&_1 {
-			width: 290px;
-			right: calc(50% + 730px);
+			width: fluid(290px, 220px, xxxlg, xxlg);
+			right: calc(50% + fluid(730px, 500px, xxxlg, xxlg));
 			top: 304px;
 		}
 		
 		&_2 {
-			width: 95px;
-			right: calc(50% + 780px);
+			width: fluid(95px, 80px, xxxlg, xxlg);
+			right: calc(50% + fluid(780px, 550px, xxxlg, xxlg));
 			bottom: 0px;
 		}
 		
 		&_3 {
-			width: 550px;
-			left: calc(50% + 500px);
+			width: fluid(550px, 460px, xxxlg, xxlg);
+			left: calc(50% + fluid(500px, 340px, xxxlg, xxlg));
 			bottom: 120px;
 		}
 	}

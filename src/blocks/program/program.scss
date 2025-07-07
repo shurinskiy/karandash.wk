@@ -12,20 +12,20 @@
 		}
 		
 		&_1 {
-			width: 370px;
-			right: calc(50% + 690px);
+			width: fluid(370px, 300px, xxxlg, xxlg);
+			right: calc(50% + fluid(690px, 500px, xxxlg, xxlg));
 			top: 385px;
 		}
-
+		
 		&_2 {
-			width: 360px;
-			left: calc(50% + 620px);
+			width: fluid(360px, 280px, xxxlg, xxlg);
+			left: calc(50% + fluid(620px, 480px, xxxlg, xxlg));
 			top: 505px;
 		}
 		
 		&_3 {
-			width: 255px;
-			right: calc(50% + 645px);
+			width: fluid(255px, 200px, xxxlg, xxlg);
+			right: calc(50% + fluid(645px, 520px, xxxlg, xxlg));
 			bottom: -25px;
 		}
 	}

@@ -14,33 +14,37 @@
 
 	&__decor {
 
-		&_1 {
-			width: 500px;
-			left: -163px;
-			top: 145px;
+		@include media('<=lg') {
+			display: none;
 		}
 
+		&_1 {
+			width: 500px;
+			right: calc(50% + fluid(610px, 370px, xxxlg, xxlg));
+			top: 145px;
+		}
+		
 		&_2 {
 			width: 315px;
 			bottom: 160px;
-			left: calc(50% + 620px);
+			left: calc(50% + fluid(620px, 420px, xxxlg, xxlg));
 		}
 		
 		&_3 {
 			width: 190px;
-			left: calc(50% - 425px);
+			left: calc(50% - fluid(425px, 250px, xxxlg, xxlg));
 			top: -45px;
 		}
 		
 		&_4 {
 			width: 130px;
-			left: 110px;
+			right: calc(50% + fluid(700px, 460px, xxxlg, xxlg));
 			top: 350px;
 		}
 
 		&_5 {
 			width: 405px;
-			left: calc(50% + 775px);
+			left: calc(50% + fluid(775px, 580px, xxxlg, xxlg));
 			bottom: -60px;
 		}
 	}

@@ -2,8 +2,8 @@
 
 .location {
 	$self: &;
-	--ht: 775px;
 	--vc: 1;
+	--ht: 775px;
 	position: relative;
 
 	&__decor {
@@ -13,20 +13,20 @@
 		}
 		
 		&_1 {
-			width: 290px;
-			right: calc(50% + 775px);
+			width: fluid(290px, 220px, xxxlg, xxlg);
+			right: calc(50% + fluid(775px, 550px, xxxlg, xxlg));
 			top: 295px;
 		}
-
+		
 		&_2 {
-			width: 175px;
-			right: calc(50% + 735px);
+			width: fluid(175px, 120px, xxxlg, xxlg);
+			right: calc(50% + fluid(735px, 540px, xxxlg, xxlg));
 			top: 480px;
 		}
-
+		
 		&_3 {
-			width: 150px;
-			left: calc(50% + 710px);
+			width: fluid(150px, 120px, xxxlg, xxlg);
+			left: calc(50% + fluid(710px, 540px, xxxlg, xxlg));
 			bottom: -20px;
 		}
 	}
@@ -46,7 +46,6 @@
 				z-index: 1;
 			}
 		}
-
 	}
 	
 	&__inner {

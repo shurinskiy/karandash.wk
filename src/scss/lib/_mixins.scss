@@ -124,14 +124,17 @@
 
 // плавное изменение размера на заданном диапазоне ширины экрана (через медиазапросы)
 @mixin range($currentValue, $targetValue, $currentScreen, $targetScreen, $property: 'font-size') {
+	$currentScreen: use-matches($currentScreen);
+	$targetScreen: use-matches($targetScreen);
+
 	$diffValue: num($currentValue) - num($targetValue);
 	$diffScreen: num($currentScreen) - num($targetScreen);
 
-	@media (max-width: $currentScreen) {
-		#{$property}: calc(#{$targetValue} + #{$diffValue} * ((100vw - #{$targetScreen}) / #{$diffScreen}));
+	@media (max-width: #{$currentScreen}px) {
+		#{$property}: calc(#{$targetValue} + #{$diffValue} * ((100vw - #{$targetScreen}px) / #{$diffScreen}));
 	}
-	
-	@media (max-width: $targetScreen) {
+
+	@media (max-width: #{$targetScreen}px) {
 		#{$property}: $targetValue;
 	}
 }
