@@ -32,7 +32,7 @@
 
 	&__wave {
 		position: absolute;
-		z-index: 2;
+		z-index: 1;
 		left: 0;
 		width: 100%;
 
@@ -45,7 +45,7 @@
 		}
 	}
 	
-	&__title.title {
+	&__title.title::before {
 		background-color: #5796a4;
 	}
 	

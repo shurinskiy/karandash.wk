@@ -6,7 +6,7 @@ import { Autoplay } from 'swiper/modules';
 	new Swiper(".hero__slider", {
 		modules: [ Autoplay ],
 		loop: true,
-		speed: 500,
+		speed: 1000,
 		spaceBetween: 0,
 		// noSwiping: true,
 		// simulateTouch: false, 

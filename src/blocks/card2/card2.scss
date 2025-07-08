@@ -52,7 +52,7 @@
 		&::before {
 			display: block;
 			position: absolute;
-			bottom: 100%;
+			bottom: calc(100% - 1px);
 			left: 0;
 			content: '';
 			background-color: #cbedf3;

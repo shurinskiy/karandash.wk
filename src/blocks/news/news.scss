@@ -55,8 +55,11 @@
 	}
 	
 	&__title.title {
-		background-color: #0e396c;
 		margin-bottom: 60px;
+		
+		&::before {
+			background-color: #0e396c;
+		}
 		
 		@include media('<=xxs') {
 			margin-bottom: 35px;
@@ -64,8 +67,8 @@
 	}
 	
 	&__top {
-		background-color: #0e396c;
 		margin-bottom: 60px;
+		background-color: #0e396c;
 		
 		@include media('<=xxs') {
 			margin-bottom: 35px;

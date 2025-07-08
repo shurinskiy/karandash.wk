@@ -50,12 +50,10 @@
 	}
 
 	&__inner {
-		position: relative;
 		height: 100%;
+		position: relative;
 		display: flex;
-		align-items: flex-end;
 		flex-flow: column nowrap;
-		justify-content: space-around;
 
 		@include media('<=xxs') {
 			padding: 50px 0;
@@ -88,33 +86,87 @@
 		clip-path: polygon(3% 12%, 41% 0, 88% 5%, 100% 28%, 98% 90%, 67% 100%, 5% 95%, 0 64%);
 		background-color: #5595a4;
 		pointer-events: none;
-		max-width: 100%;
+		position: absolute;
 		width: 720px;
-
-		@include media('>xxxlg') {
-			translate: 50px -20px;
+		top: 80px;
+		right: calc(fluid(50px, 0px, xxxxlg, xxxlg) * -1);
+		width: fluid(720px, 500px, xxxxlg, xxlg);
+		
+		@include media('<=xxlg') {
+			width: fluid(500px, 400px, xxxlg, xlg);
+			right: 30px;
+			top: 55px;
+		}
+		
+		@include media('<=xlg') {
+			width: fluid(400px, 360px, xlg, lg);
+			right: 70px;
+			top: 90px;
+		}
+		
+		@include media('<=lg') {
+			width: fluid(360px, 290px, lg, md);
+			right: 48px;
+			top: 67px;
+		}
+		
+		@include media('<=md') {
+			width: fluid(290px, 250px, md, sm);
+			right: 20px;
+			top: 40px;
+		}
+		
+		@include media('<=sm') {
+			width: fluid(250px, 230px, sm, xs);
+			right: 20px;
+			top: 40px;
+		}
+		
+		@include media('<=xs') {
+			width: fluid(230px, 180px, xs, xxs);
+			right: 10px;
+			top: 40px;
+		}
+		
+		@include media('<=xxs') {
+			width: fluid(180px, 130px, xxs, xxxs);
+			right: 0px;
+			top: 20px;
+		}
+		
+		@include media('<=xxxs') {
+			right: 0px;
+			top: 15px;
 		}
 	}
 
 	&__come.come {
-		margin-right: 16.5%;
+		position: absolute;
+		right: 16.5%;
+		bottom: 100px;
 		z-index: 1;
 		
-		@include media('<=xlg') {
-			translate: 0 -100px;
+		@include media('<=xxlg') {
+			bottom: 200px;
+			right: 20%;
+			max-width: 260px;
+			font-size: 27px;
 		}
 		
 		@include media('<=lg') {
-			margin-right: 10%;
+			max-width: 240px;
+			font-size: 25px;
+			right: 5%;
+			
 		}
 		
 		@include media('<=md') {
-			margin-right: 0;
+
 		}
 
 		@include media('<=sm') {
-			translate: unset;
-			margin: 0 auto;
+			position: static;
+			margin: auto auto 10%;
 		}
 
 		@include media('<=xxs') {
@@ -137,7 +189,7 @@
 		span {
 			display: block;
 			color: #fff;
-			font-size: fluid(250px, 165px, xxxlg, sm);
+			font-size: fluid(250px, 140px, xxxlg, sm);
 			text-transform: uppercase;
 			line-height: 0.7;
 

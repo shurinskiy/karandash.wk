@@ -33,9 +33,13 @@
 	
 	&__title.title {
 		position: relative;
-		background-color: #058a44;
+		
+		&::before {
+			background-color: #058a44;
+		}
 		
 		span {
+			z-index: 1;
 			color: #fff;
 
 			@include media('<=md') {

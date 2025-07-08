@@ -2,13 +2,25 @@
 
 .title {
 	$self: &;
-	text-transform: uppercase;
+	position: relative;
 	padding: 0 var(--gap);
+	text-transform: uppercase;
 	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
+
+	&::before {
+		display: block;
+		content: '';
+		position: absolute;
+		pointer-events: none;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
 
 	strong {
 		display: block;
@@ -31,5 +43,16 @@
 		line-height: 1.25;
 		font-weight: 700;
 		text-align: left;
+	}
+
+	@include media('<=lg') {
+		&::before {
+			width: 0;
+		}
+
+		&.run::before {
+			transition: width 0.8s;
+			width: 100%;
+		}
 	}
 }

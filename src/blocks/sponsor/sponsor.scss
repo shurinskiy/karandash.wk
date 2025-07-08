@@ -4,8 +4,11 @@
 	$self: &;
 
 	&__title.title {
-		background-color: #058a44;
 		position: relative;
+		
+		&::before {
+			background-color: #058a44;
+		}
 		
 		strong {
 			letter-spacing: -0.05em;

@@ -95,7 +95,7 @@
 		}
 	}
 	
-	&__title.title {
+	&__title.title::before {
 		background-color: #f6af1b;
 	}
 	
@@ -197,7 +197,7 @@
 			aspect-ratio: 0.8;
 			width: 80px;
 			top: 0;
-			right: 100%;
+			right: calc(100% - 1px);
 			
 			@include media('<=md') {
 				width: 50px;
@@ -212,7 +212,7 @@
 				left: 0;
 				top: auto;
 				right: auto;
-				bottom: 100%;
+				bottom: calc(100% - 1px);
 			}
 		}
 	}

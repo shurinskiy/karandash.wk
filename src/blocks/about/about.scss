@@ -3,7 +3,7 @@
 .about {
 	$self: &;
 
-	&__title.title {
+	&__title.title::before {
 		background-color: #f70000;
 	}
 

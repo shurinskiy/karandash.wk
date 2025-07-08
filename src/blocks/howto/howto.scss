@@ -48,10 +48,14 @@
 	}
 
 	&__title.title {
-		background-color: #ef5899;
 		position: relative;
 		
+		&::before {
+			background-color: #ef5899;
+		}
+		
 		span {
+			z-index: 1;
 			color: #fff;
 			margin: -15px 0;
 			font-size: fluid(50px, 26px, xxxlg, lg);
