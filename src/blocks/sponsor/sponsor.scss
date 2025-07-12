@@ -44,10 +44,17 @@
 		align-items: center;
 		justify-content: space-between;
 		grid-gap: 24px;
+
+		@include media('<=xxs') {
+			grid-gap: 16px;
+		}
 	}
 
 	&__item {
 
+		img {
+			display: block;
+		}
 	}
 
 	&__hr {

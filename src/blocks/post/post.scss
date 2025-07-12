@@ -142,14 +142,14 @@
 		letter-spacing: 0.02em;
 		font-weight: 700;
 		font-size: fluid(67px, 24px);
-		margin-bottom: -20px;
+		position: relative;
 		z-index: 1;
 	}
 
 	&__intro {
 		background-color: #cbedf3;
 		max-width: 1140px;
-		margin: 0px auto;
+		margin: -20px auto 0px;
 		font-weight: 300;
 		font-size: fluid(25px, 17px);
 		padding: fluid(65px, 30px) fluid(80px, 20px);

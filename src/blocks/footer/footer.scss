@@ -2,9 +2,8 @@
 
 .footer {
 	$self: &;
-	padding: 170px 0 115px;
+	padding: 185px 0 115px;
 	background: url('./images/waves-down.svg') center top -1px / 14.5% auto repeat-x #0e396c;
-	// background-size: fluid(270px, 100px, xxxxlg, xxs);
 	position: relative;
 	color: #fff;
 
@@ -33,7 +32,7 @@
 		justify-content: space-between;
 		gap: 24px;
 
-		@include media('<=xs') {
+		@include media('<=sm') {
 			flex-flow: column nowrap;
 		}
 	}
@@ -41,20 +40,21 @@
 	&__col {
 		display: flex;
 		flex-flow: column nowrap;
-		gap: 16px;
+		gap: 22px;
 		
 		&_social {
 			justify-content: space-around;
 			align-items: flex-end;
+			padding-top: 6px;
 			max-width: 170px;
 			width: 100%;
 			
-			@include media('<=sm') {
+			@include media('<=lg') {
 				max-width: none;
 				width: auto;
 			}
 			
-			@include media('<=xs') {
+			@include media('<=sm') {
 				align-items: center;
 				flex-flow: row nowrap;
 				justify-content: flex-start;
@@ -89,7 +89,7 @@
 		font-weight: 700;
 		margin-top: auto;
 
-		@include media('<=xs') {
+		@include media('<=sm') {
 			margin: 0 0 0 auto;
 		}
 	}

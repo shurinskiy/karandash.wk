@@ -12,6 +12,10 @@
 		min-height: 680px;
 	}
 	
+	@include media('<=xlg') {
+		min-height: 720px;
+	}
+	
 	@include media('<=lg') {
 		min-height: 620px;
 	}
@@ -165,8 +169,8 @@
 		@include media('<=xxlg') {
 			bottom: 20%;
 			right: 20%;
-			max-width: 260px;
-			font-size: 27px;
+			max-width: 240px;
+			font-size: 25px;
 		}
 		
 		@include media('<=lg') {
