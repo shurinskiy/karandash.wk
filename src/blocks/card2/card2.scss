@@ -73,12 +73,19 @@
 		@include media('<=xxs') {
 			font-size: fluid(19px, 16px, xxs, xxxs);
 		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
 	}
 	
 	&__text {
 		font-size: 20px;
 		font-weight: 300;
 		margin-bottom: 20px;
+		text-decoration: none;
+		color: inherit;
 		
 		@include media('<=md') {
 			font-size: fluid(20px, 15px, md, xs);

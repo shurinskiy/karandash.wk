@@ -228,12 +228,19 @@
 		@include media('<=xxs') {
 			font-size: fluid(19px, 16px, xxs, xxxs);
 		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
 	}
 	
 	&__text {
 		font-size: fluid(20px, 15px, xlg, md);
+		text-decoration: none;
 		margin-bottom: 20px;
 		font-weight: 300;
+		color: inherit;
 		
 		@include media('<=xs') {
 			font-size: 13px;
