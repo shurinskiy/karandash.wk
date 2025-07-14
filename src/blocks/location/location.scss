@@ -78,8 +78,9 @@
 		overflow: hidden;
 		background: url('./images/location-map.webp') center / auto no-repeat transparent;
 		background-size: auto calc(var(--ht) * var(--vc));
-		flex-grow: 1;
 		height: calc(var(--ht) * var(--vc));
+		flex-grow: 1;
+		z-index: 1;
 		
 		@include media('<=md') {
 			--vc: 0.65;
@@ -101,109 +102,159 @@
 				z-index: 1;
 			}
 
-			&:nth-child(1) {
+			&[data-id='L1'] {
 				top: calc(50% - 275px * var(--vc));
 				left: calc(50% + 105px * var(--vc));
 			}
 			
-			&:nth-child(2) {
+			&[data-id='L2'] {
 				top: calc(50% - 258px * var(--vc));
 				left: calc(50% - 90px * var(--vc));
 			}
 			
-			&:nth-child(3) {
+			&[data-id='P1'] {
 				top: calc(50% - 258px * var(--vc));
 				left: calc(50% - 75px * var(--vc));
 			}
 			
-			&:nth-child(4) {
+			&[data-id='K1'] {
 				top: calc(50% - 258px * var(--vc));
 				left: calc(50% - 60px * var(--vc));
 			}
 
-			&:nth-child(5) {
+			&[data-id='L3'] {
 				top: calc(50% - 293px * var(--vc));
 				left: calc(50% + 65px * var(--vc));
 			}
 
-			&:nth-child(6) {
+			&[data-id='L4'] {
 				top: calc(50% - 218px * var(--vc));
 				left: calc(50% - 150px * var(--vc));
 			}
 			
-			&:nth-child(7) {
+			&[data-id='P2'] {
+				top: calc(50% - 335px * var(--vc));
+				left: calc(50% + 40px * var(--vc));
+			}
+			
+			&[data-id='P3'] {
 				top: calc(50% - 260px * var(--vc));
-				left: calc(50% - 205px * var(--vc));
+				left: calc(50% - 15px * var(--vc));
 			}
 			
-			&:nth-child(8) {
-				top: calc(50% - 172px * var(--vc));
-				left: calc(50% - 120px * var(--vc));
-			}
-			
-			&:nth-child(9) {
+			&[data-id='L5'] {
 				top: calc(50% - 90px * var(--vc));
 				left: calc(50% - 80px * var(--vc));
 			}
 
-			&:nth-child(10) {
+			&[data-id='K2'] {
 				top: calc(50% - 75px * var(--vc));
 				left: calc(50% - 138px * var(--vc));
 			}
 
-			&:nth-child(11) {
+			&[data-id='L6'] {
 				top: calc(50% - 68px * var(--vc));
 				left: calc(50% - 115px * var(--vc));
 			}
 
-			&:nth-child(12) {
+			&[data-id='L7'] {
 				top: calc(50% - 68px * var(--vc));
 				left: calc(50% - 102px * var(--vc));
 			}
 
-			&:nth-child(13) {
+			&[data-id='L8'] {
 				top: calc(50% - 28px * var(--vc));
 				left: calc(50% - 198px * var(--vc));
 			}
 
-			&:nth-child(14) {
+			&[data-id='L9'] {
 				top: calc(50% - 28px * var(--vc));
 				left: calc(50% - 184px * var(--vc));
 			}
 
-			&:nth-child(15) {
+			&[data-id='L10'] {
 				top: calc(50% + 35px * var(--vc));
 				left: calc(50% - 119px * var(--vc));
 			}
 
-			&:nth-child(16) {
+			&[data-id='P4'] {
 				top: calc(50% + 35px * var(--vc));
 				left: calc(50% - 138px * var(--vc));
 			}
 
-			&:nth-child(17) {
+			&[data-id='L11'] {
 				top: calc(50% + 10px * var(--vc));
 				left: calc(50% - 75px * var(--vc));
 			}
 
-			&:nth-child(18) {
+			&[data-id='P5'] {
 				top: calc(50% + 110px * var(--vc));
 				left: calc(50% - 93px * var(--vc));
 			}
 
-			&:nth-child(19) {
+			&[data-id='L12'] {
 				top: calc(50% + 188px * var(--vc));
 				left: calc(50% - 75px * var(--vc));
 			}
 
-			&:nth-child(20) {
+			&[data-id='L13'] {
 				top: calc(50% + 85px * var(--vc));
 				left: calc(50% + 38px * var(--vc));
 			}
 
-			&:nth-child(21) {
+			&[data-id='L14'] {
 				top: calc(50% + 268px * var(--vc));
 				left: calc(50% - 147px * var(--vc));
+			}
+
+			&[data-id='P6'] {
+				top: calc(50% - 275px * var(--vc));
+				left: calc(50% + 55px * var(--vc));
+			}
+
+			&[data-id='P7'] {
+				top: calc(50% - 240px * var(--vc));
+				left: calc(50% + 40px * var(--vc));
+			}
+
+			&[data-id='P8'] {
+				top: calc(50% - 260px * var(--vc));
+				left: calc(50% + 105px * var(--vc));
+			}
+
+			&[data-id='P9'] {
+				top: calc(50% + 155px * var(--vc));
+				left: calc(50% - 80px * var(--vc));
+			}
+
+			&[data-id='P10'] {
+				top: calc(50% + 150px * var(--vc));
+				left: calc(50% - 60px * var(--vc));
+			}
+
+			&[data-id='P11'] {
+				top: calc(50% + 140px * var(--vc));
+				left: calc(50% - 5px * var(--vc));
+			}
+
+			&[data-id='P12'] {
+				top: calc(50% + 210px * var(--vc));
+				left: calc(50% - 75px * var(--vc));
+			}
+
+			&[data-id='P13'] {
+				top: calc(50% + 240px * var(--vc));
+				left: calc(50% - 95px * var(--vc));
+			}
+
+			&[data-id='P14'] {
+				top: calc(50% + 325px * var(--vc));
+				left: calc(50% - 75px * var(--vc));
+			}
+
+			&[data-id='P15'] {
+				top: calc(50% + 310px * var(--vc));
+				left: calc(50% + 40px * var(--vc));
 			}
 		}
 	}

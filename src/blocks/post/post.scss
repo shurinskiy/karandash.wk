@@ -167,7 +167,7 @@
 		}
 	}
 	
-	&__image {
+	&__thumb {
 
 		img {
 			display: block;
@@ -276,10 +276,32 @@
 		}
 	}
 
-	&__source {
-
-		a {
-			color: #0e396c;
+	&__image {
+		margin-bottom: 60px;
+		
+		@include media('<=lg') {
+			margin-bottom: 50px;
+		}
+		
+		@include media('<=md') {
+			margin-bottom: 40px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 30px;
+		}
+		
+		img {
+			display: block;
+			width: 100%;
+		}
+		
+		p {
+			font-size: fluid(16px, 14px);
+			font-weight: 400;
+			max-width: 980px;
+			padding-top: 5px;
+			margin: 0 auto;
 		}
 	}
 }
