@@ -4,6 +4,7 @@
 	$self: &;
 	background: url('./images/post-top-waves.svg') top center / 14.5% auto repeat-x transparent;
 	// background-size: fluid(270px, 100px, xxxxlg, xxs);
+	font-weight: 300;
 	position: relative;
 	padding-top: fluid(200px, 100px);
 	padding-bottom: 60px;
@@ -297,8 +298,8 @@
 		}
 		
 		p {
-			font-size: fluid(16px, 14px);
-			font-weight: 400;
+			font-size: fluid(15px, 13px);
+			font-weight: 300;
 			max-width: 980px;
 			padding-top: 5px;
 			margin: 0 auto;

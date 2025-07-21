@@ -43,10 +43,22 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		grid-gap: 24px;
+		grid-gap: 40px;
+
+		@include media('<=xlg') {
+			grid-gap: 30px;
+		}
+
+		@include media('<=md') {
+			grid-gap: 24px;
+		}
+
+		@include media('<=sm') {
+			grid-gap: 16px;
+		}
 
 		@include media('<=xxs') {
-			grid-gap: 16px;
+			grid-gap: 10px;
 		}
 	}
 
